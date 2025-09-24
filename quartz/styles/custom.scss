@@ -1,0 +1,35 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+
+/* Paper texture background overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/static/paper-texture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.25; /* adjust texture intensity */
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: multiply; /* blends with current colors */
+}
+
+/* Remove tiny top gap on mobile grid */
+@media all and (max-width: 800px) {
+  .page > #quartz-body {
+    row-gap: 0;
+  }
+}
+
+/* Remove leftover white sidebar strip on mobile */
+@media all and (max-width: 800px) {
+  .sidebar.left {
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+}

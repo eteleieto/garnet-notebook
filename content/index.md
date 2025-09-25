@@ -12,6 +12,7 @@ More coming soon...
 3. 16 Cubits
 4. The Metaphysics of the Restaurant 
 5. Mold Dinner
+6. Tools for Thinking in Food
 ##### Previous Gatherings
 1. [[Fermentation Workshop]]
 2. [[Coffee Ceremony]]

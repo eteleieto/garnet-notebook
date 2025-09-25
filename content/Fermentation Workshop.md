@@ -26,7 +26,7 @@ On Saturday September 13th and Saturday Sept 20th, [Garnet](https://www.instagra
 
 **part 2:** return with your ferment, and taste each other's over a shared lunch and conversation
 
-#### Experience
+### Experience
 
 We went to the Union Square Farmer's Market Saturday morning to source vegetables and fruits for our miniature farmer's market. 
 
@@ -97,10 +97,9 @@ People sent texts and videos, and calls, seeking clarity on the nature of their 
 ![[Screenshot 2025-09-25 at 4.40.35 PM.png]]
 
 
-In Part 2, a smaller group came together, bringing their ferments along with. We took each, ensured their safety, and dished them out on sample plates for a tasting and conversation. The ferments came out beautifully, with greta lactic depth and diversity. 
+In Part 2, a smaller group came together, bringing their ferments along with. We took each, ensured their safety, and dished them out on sample plates for a tasting and conversation. The ferments came out beautifully, with great lactic depth and diversity. Highlights included a cucumber and ground cherry ferment and a bok choy and grape ferment. 
 
-As the group tried each ferment, the ferment-maker shared more about what they noticed in the time between Part 1 and 2. Which 
-
+As the group tried each ferment, the ferment-maker shared more about what they noticed in the time between Part 1 and 2. 
 
 ![](https://lh3.googleusercontent.com/pw/AP1GczNObtYv0LMf9zU5dMSbR0Q6vNmFAmcknH5vvrxuPmMOlk4IsZmMquMu-jWzylqkWE_QON-9CZqpKw7RipBgjm0WDs_DSF1fEZUkwL-q2vzvb93390e5t61u1zFZQfRbBDjz7m7wRQ_yF1x-08Km0wB-=w1348-h1798-s-no-gm?authuser=0)
 

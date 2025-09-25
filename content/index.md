@@ -14,8 +14,6 @@ More coming soon...
 5. Mold Dinner
 ##### Previous Gatherings
 1. [[Fermentation Workshop]]
-	1. small version
-	2. elongated journaly form
 2. [[Coffee Ceremony]]
 3. [[Daylight Night Market]]
 

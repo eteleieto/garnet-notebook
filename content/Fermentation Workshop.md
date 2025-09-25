@@ -8,26 +8,32 @@ collaborators: "[[The Northeast Larder Project]]"
 supported by: Jaclyn Chan and Ambrook Ag
 size: "15"
 ---
+*more notes, learnings, and writings coming soon...
+
 **Location:** SoHo, NYC
+
 **Collaborators:** [[The Northeast Larder Project]] and [[Jaclyn Chan]]
+
 **Supported By:** [Ambrook Ag](https://ambrook.com/)
 
 *"fermentation isn't just any rot—it's culturally appropriate, socially significant, carefully controlled rot."* [[Joshua Evans]]
 
 On Saturday September 13th and Saturday Sept 20th, [Garnet](https://www.instagram.com/garnet.nyc/) and [[The Northeast Larder Project]] hosted a 2-part fermentation workshop. 
 
-Part 1: learn about ferments – science, regional history, metaphor, and more – and make your own from local produce. 
+**part 1:** learn about ferments – science, regional history, metaphor, and more – and make your own from local produce. 
 
-part 1.5: bring your ferment home, pay attention, take note, and take care of it. 
+**part 1.5:** bring your ferment home, pay attention, take note, and take care of it. 
 
-part 2: return with your ferment, and taste each other's over a shared lunch and conversation
+**part 2:** return with your ferment, and taste each other's over a shared lunch and conversation
 
 #### Experience
 
 We went to the Union Square Farmer's Market Saturday morning to source vegetables and fruits for our miniature farmer's market. 
 
+
 ![](https://lh3.googleusercontent.com/pw/AP1GczO-Zhi3DUagPsH_KBqyHjaSZNL3plAqk4Ji5mqQR9YbRPDZxbPu9-KDlIQyv2OX7m4HsoDnjVMV18cuxj5wSMOh1_B-B9KYSakF5Hh4lMo5lzKOfjgfjq6SIsGd0PQFvtknsR43otu9827cCH2cR5Ar=w1564-h1174-s-no-gm?authuser=0) ![](https://lh3.googleusercontent.com/pw/AP1GczPvnN4KaCdV-B05HW0eKahzmQDHqrkpX_ag9JHkpJrFCltNcwq7glh4DOfcTCyxxDOJHhySDbSZQKSOiLpZThz-AorZZCffKTq00B_u7xdVkkbV0PwTGNIIP6_C1n8HkCUmK_5STyyckuTOnWqDF3ME=w1348-h1796-s-no-gm?authuser=0) 
 ![](https://lh3.googleusercontent.com/pw/AP1GczPPuqPw1LAqUzAVw93oUVsKdueDho8I_7J0ms60QzTBknkfs10dw3NJ6EzLlg5fEkeXrgRSE5W1Hg429y8A9Cj-FZTC-a2xpQr8ryn-FQfg0ld8bPVJn7uL9zz5qaUsJn2IezUM4Jvpkc_geoFw0CyJ=w1348-h1798-s-no-gm?authuser=0)
+
 
 During the event, we'd also be talking about the history of fermentation in the Northeast United States, from pre-colonial indigenous methods to cider-making traditions and the pickle pushcarts of Lower East Side Jews to contemporary revivals. 
 
@@ -40,13 +46,15 @@ We picked up a bottle of The Hopped One, a wild-fermented hard cider that uses h
 
 ![](https://lh3.googleusercontent.com/pw/AP1GczOc-yiYmV6OGBIZkzC-2P08z86QWvY7ffJdxWbcZBmN1mhXrwFvgOlXSr8-CSWBwnq0WfjgMCt-ug1C8r-w-1SH0KI-PmO5Z7ZRtdxnZRGQxpkSlNW8ioqb-hJkamXxprCoxmYtC9q8_uyOmw1zHdyR=w1564-h1174-s-no-gm?authuser=0)
 
+
 At the space, we organized the room into a classroom, farmer's market, and lab. 
+
 
 ![](https://lh3.googleusercontent.com/pw/AP1GczMBMMAEZK5KZI6FfuuYVMafGhG6qATuBQNc2Oo8vSEZGyGjJ9WVsRsCXBcfPTJGwn98L_8vx_z121GmE5L79KotV2YBy_xTolemm15jzxNdQSjxubZfWGiuxHnueINDRjDZB6KowA-cWd0EyLDBzeXeTw=w1348-h1798-s-no-gm?authuser=0)
 
 Participants flipped through our fermentation library, from [[The Noma Guide to Fermentation]] to [[Sandor Katz]]'s [[Wild Fermentation]] and [[Pascal Baudar]]'s [[Wildcrafted Fermentation]]. 
 
-As a baseline, we asked what people think of when they hear the word "ferment". Here is what they said
+As a baseline, we asked what people think of when they hear the word "ferment". Here is what they said:
 1. Patience
 2. Tomato
 3. Gut Health
@@ -60,16 +68,18 @@ As a baseline, we asked what people think of when they hear the word "ferment". 
 11. Ginger
 12. Mold and Bacteria
 
-We sampled ferments, a white kimchi from [[Danny Bowein]], a homemade shiso lacto pickle, and a lacto-fermented sunchoke from [Kimchi Harvest](https://www.kimchiharvest.com/). We also served a spicy dill pickle from Norwich Meadows, to see if we could toy out the difference between acetic and lactic acid. 
+We sampled ferments, a white kimchi from [[Danny Bowein]], a homemade shiso lacto pickle, and a lacto-fermented sunchoke from [Kimchi Harvest](https://www.kimchiharvest.com/). We also served a spicy dill pickle from [Norwich Meadows Farm](https://norwichmeadowsfarm.com/), to see if we could toy out the difference between acetic and lactic acid. 
 
-We discussed the science of lacto fermentation, the process by which lactobacilus converts sugars into lactic acid and CO2, and situated it within a territory of the many other types of fermentation. 
+We discussed the science of lacto fermentation, the process by which lactobacilus converts sugars into lactic acid and CO2, and situated it the territory of the many other types of fermentation
 
 Participants shopped at our farmer's market, having to consider how varied produce items would ferment, and setup at a long table to make their own ferment. 
+
 
 ![](https://lh3.googleusercontent.com/pw/AP1GczP-u-FsJT-Fp8NcVvJB7b1QhNZsM_R5JdqlfcAtVHRCNTpQWTH9VyvDVT0uivigavA6QMbeW9Rr2fjfbMxWdFmU7Y0U3Ge6fJhz-YabJKmGh_5fURCmgUmu0gjz22vjCGoMYCUeu_jlqXusbdh5tYwMAA=w1348-h1798-s-no-gm?authuser=0)
 
 
 ![](https://lh3.googleusercontent.com/pw/AP1GczPYE6AHOpaQt5ahM5kqpDu_DcoNse4DF-uamdDD3OututxzKP5-x0tZfaZJlgBFZtOM1gccBCYqu_JdKevegwreFzko6qzvfwBd8z4y647XniDg3QapIZ22Zvv2Emv_hcqWP-OZurHyd9Ps0JW-KQ6xrg=w1348-h1798-s-no-gm?authuser=0)
+
 
 Each person's card, which served as a notebook during the event, also included tips for taking care of their ferment. 
 

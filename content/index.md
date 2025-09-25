@@ -12,7 +12,11 @@ What do we learn about how a ground-level storefront interacts with the street, 
 That as we intend to build more livable human settlements, that the fundamental unit of the city is storefronts. And, if we wish to understand them better, they must become places of knowledge production themselves. 
 
 
+becomes a community notebooks... so many ideas at thte table
+
+
 Explore...
+
 
 
 ##### Ideas and Wanderings
@@ -22,8 +26,13 @@ Explore...
 ##### Upcoming Gatherings
 1. [[Regional Grain Dinner]]
 2. [[Wine as Experience]]
+3. 16 Cubits
+4. The Metaphysics of the Restaurant 
+5. Mold Dinner
 ##### Previous Gatherings
 1. [[Fermentation Workshop]]
+	1. small version
+	2. elongated journaly form
 2. [[Coffee Ceremony]]
 3. [[Daylight Night Market]]
 

@@ -39,7 +39,7 @@ During the event, we'd also be talking about the history of fermentation in the 
 
 So, when we saw the [New York Cider Company](https://www.nyciderco.com/about-1), we excitedly tried a few ciders. 
 
-Wherever possible, we wished to weave sensory and taste experiences into our discussion of history. The great pedagogical advantage of teaching about food and drink, is that we can draw associative links between knowledge and taste, which both supports the cataloging of taste and the makes information more sticky.
+Wherever possible, we wished to weave sensory and taste experiences into our discussion of history. The great pedagogical advantage of teaching about food and drink, is that we can draw associative links between knowledge and taste, which both supports the cataloging of taste and makes information more sticky.
 
 We picked up a bottle of The Hopped One, a wild-fermented hard cider that uses heirloom Golden Russets and Rhode Island Greening alongside New York State Willamette hops, which would traditionally be used as a bittering agent in beer. 
 

@@ -9,13 +9,16 @@ More coming soon...
 ##### Upcoming Gatherings
 1. [[Regional Grain Dinner]]
 2. [[Wine as Experience]]
-3. 16 Cubits
+3. [[16 Cubits]]
 4. The Metaphysics of the Restaurant 
 5. Mold Dinner
 6. Tools for Thinking in Food
+
 ##### Previous Gatherings
 1. [[Fermentation Workshop]]
-2. [[Coffee Ceremony]]
-3. [[Daylight Night Market]]
+2. [[Trial – Wine as Experience | Wine as Experience Trial]]
+3. [[Coffee Ceremony San Francisco]]
+4. [[Daylight Night Market]]
+
 
 

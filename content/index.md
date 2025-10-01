@@ -17,7 +17,7 @@ More coming soon...
 ##### Previous Gatherings
 1. [[Fermentation Workshop]]
 2. [[Trial – Wine as Experience | Wine as Experience Trial]]
-3. [[Coffee Ceremony San Francisco]]
+3. [[Coffee Ceremony of SF]]
 4. [[Daylight Night Market]]
 
 

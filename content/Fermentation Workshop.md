@@ -8,15 +8,16 @@ collaborators: "[[The Northeast Larder Project]]"
 supported by: Jaclyn Chan and Ambrook Ag
 size: "15"
 ---
-*more notes, learnings, and writings coming soon...
-
 **Location:** SoHo, NYC
 
 **Collaborators:** [[The Northeast Larder Project]] and [[Jaclyn Chan]]
 
 **Supported By:** [Ambrook Ag](https://ambrook.com/)
 
-*"fermentation isn't just any rot—it's culturally appropriate, socially significant, carefully controlled rot."* [[Joshua Evans]]
+
+
+
+>*"fermentation isn't just any rot—it's culturally appropriate, socially significant, carefully controlled rot."* [[Joshua Evans]]
 
 On Saturday September 13th and Saturday Sept 20th, [Garnet](https://www.instagram.com/garnet.nyc/) and [[The Northeast Larder Project]] hosted a 2-part fermentation workshop. 
 

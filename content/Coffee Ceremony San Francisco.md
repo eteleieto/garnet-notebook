@@ -8,7 +8,6 @@ date: 2025-08-23
 
 ![[DSC_0001.jpg|250]] ![[DSC_0003.jpg|250]]  
 ![[DSC_0025.jpg|250]] ![[DSC_0013.jpg|250]]
-![[DSC_0014.jpg|500]] 
 ![[DSC_0015.jpg|250]] ![[DSC_0019.jpg|250]]
 *Thanks to [Agniv Sarkar](https://agniv.me/), one of our attendees, for taking some of these wonderful images.* 
 
@@ -27,9 +26,21 @@ We brought in wood slabs from [Ponderosa Millworks](https://ponderosamillworks.c
 3. wild fennel baba with grapefruit marmalade 
 
 
-##### Testimonials
+### Testimonials
 
 Here are just a few testimonials from our first ceremony.
+
+These were the words (other than basics like "coffee" and "food") which showed up most frequently in people's responses (in order)
+1. Community/Connection
+2. Intentionality/Intentional
+3. Grounded/Grounding
+4. Peaceful/Peace/Calm
+5. Meaningful
+6. Learning/Learned
+7. Slowness
+
+
+
 
 >*Loved the intentionality and craft behind the entire ceremony! It gave me space to slow down and observe. Love the pairings and flavors as well!*
 – Jonathan

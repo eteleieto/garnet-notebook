@@ -4,7 +4,13 @@ date:
 ---
 Welcome to the notebook of Garnet, a restaurant opening up in Brooklyn in 2026.
 
-More coming soon...
+>This notebook is currently being constructed.
+
+To view previous gatherings, please see the notes from [[Fermentation Workshop]] or [[Coffee Ceremony of SF]]
+
+##### Recent Notes
+[[Foraging Log]]
+[[Ideas for the Notebook]]
 
 ##### Upcoming Gatherings
 1. [[Regional Grain Dinner]]
@@ -16,7 +22,7 @@ More coming soon...
 
 ##### Previous Gatherings
 1. [[Fermentation Workshop]]
-2. [[Trial – Wine as Experience | Wine as Experience Trial]]
+2. [[Trial – Wine as Experience|Wine as Experience Trial]]
 3. [[Coffee Ceremony of SF]]
 4. [[Daylight Night Market]]
 

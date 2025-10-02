@@ -42,7 +42,7 @@ These were the words (other than words like "coffee" and "food") which showed up
 – Audrey
 
 
->*I’m so used to coffee being a rushed experience – a means to an end. It was so peaceful and humbling to sit with the steps it takes for a cup to come into our hands. Bringing people together without the dish Genuity of networking or transactions is so powerful and you both did it in such a memorable and fun way. Zero notes on the pastries – marmalade was 1000 out of 10. Honored to have been part of the first ceremony, which we had ended with the meditation like we had started with thank you bot and the guy on dishes.* 
+>*I’m so used to coffee being a rushed experience – a means to an end. It was so peaceful and humbling to sit with the steps it takes for a cup to come into our hands. Bringing people together without the disingenuity of networking or transactions is so powerful and you both did it in such a memorable and fun way. Zero notes on the pastries – marmalade was 1000 out of 10. Honored to have been part of the first ceremony, which we had ended with the meditation like we had started with thank you to the guy on dishes.* 
 – Anisha
 
 

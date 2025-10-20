@@ -10,10 +10,9 @@ To view previous gatherings, please see the notes from [[Fermentation Workshop]]
 
 ##### Recent Notes
 [[Foraging Log]]
-[[Ideas for the Notebook]]
 
 ##### Upcoming Gatherings
-1. [[Regional Grain Dinner]]
+1. [[An Evening of Northeastern Grains]]
 2. [[Wine as Experience]]
 3. [[16 Cubits]]
 4. The Metaphysics of the Restaurant 

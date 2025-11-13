@@ -17,11 +17,11 @@ Working in pairs, individuals attempted to disclose and catalog their private su
 
 Below are the notes participants took over the course of the evening. 
 
-#### Wine A
-[here](https://www.dropbox.com/scl/fi/kc0cdylxp6u3a0bpv67b7/As_combined.png?rlkey=0q5g1mxaegl44dsc7pzfju76x&st=2wnzpk6b&dl=0)
+## Wine A
+### [here](https://www.dropbox.com/scl/fi/kc0cdylxp6u3a0bpv67b7/As_combined.png?rlkey=0q5g1mxaegl44dsc7pzfju76x&st=2wnzpk6b&dl=0)
 
-#### Wine B
-[here](https://www.dropbox.com/scl/fi/f4v54jqd85njpe2qy88r8/Bs_combined.png?rlkey=zouomaid9mv0sgglvz2uqp0rq&st=tg1saj39&dl=0)
+## Wine B
+### [here](https://www.dropbox.com/scl/fi/f4v54jqd85njpe2qy88r8/Bs_combined.png?rlkey=zouomaid9mv0sgglvz2uqp0rq&st=tg1saj39&dl=0)
 
 ### Pictures
 

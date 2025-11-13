@@ -5,8 +5,11 @@ tags:
   - workshop
 date: 2025-11-04
 collaborators: "[[Adam Moritz]]"
+location: "[[Index, Greenpoint]]"
 ---
-On November 4th, [[Adam Moritz]] and I hosted *Wine as Experience*, a blind wine tasting and workshop inspired by [[John Dewey]]'s text [[Art as Experience]]. 
+![[Screenshot 2025-11-12 at 7.56.38 PM.png|500]]
+
+On November 4th, [[Adam Moritz]] and [[Benjamin Laufer]] hosted *Wine as Experience*, a blind wine tasting and workshop inspired by [[John Dewey]]'s text [[Art as Experience]]. It was hosted at [[Index, Greenpoint]]. 
 
 Palate cleansers were offered by [[The Northeast Larder Project]] – a white kimchi, lacto-grapes, and french breakfast radish pickles, all sources from the local greenmarket and fermented above my apartment's old steam radiators. 
 
@@ -14,12 +17,14 @@ Working in pairs, individuals attempted to disclose and catalog their private su
 
 Below are the notes participants took over the course of the evening. 
 
+#### Wine A
+[here](https://www.dropbox.com/scl/fi/kc0cdylxp6u3a0bpv67b7/As_combined.png?rlkey=0q5g1mxaegl44dsc7pzfju76x&st=2wnzpk6b&dl=0)
+
+#### Wine B
+[here](https://www.dropbox.com/scl/fi/f4v54jqd85njpe2qy88r8/Bs_combined.png?rlkey=zouomaid9mv0sgglvz2uqp0rq&st=tg1saj39&dl=0)
+
 ### Pictures
 
-
-
-
-![[Screenshot 2025-11-12 at 7.56.38 PM.png|500]]
 
 ![[Screenshot 2025-11-12 at 7.54.11 PM.png|250]] ![[Screenshot 2025-11-12 at 7.54.35 PM.png|250]]
 

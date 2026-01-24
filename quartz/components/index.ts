@@ -23,8 +23,6 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
-import Logo from "./Logo"
-import MobileFooterExplorer from "./MobileFooterExplorer"
 
 export {
   ArticleTitle,
@@ -52,6 +50,5 @@ export {
   Comments,
   Flex,
   ConditionalRender,
-  Logo,
-  MobileFooterExplorer,
 }
+export { default as Logo } from "./Logo"

@@ -1,35 +1,500 @@
 @use "./base.scss";
 
-// put your custom CSS here!
-
-/* Paper texture background overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("/static/paper-texture.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.25; /* adjust texture intensity */
-  pointer-events: none;
-  z-index: -1;
-  mix-blend-mode: multiply; /* blends with current colors */
+/* PP Editorial New Font Family */
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/static/fonts/PPEditorialNew-Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Remove tiny top gap on mobile grid */
-@media all and (max-width: 800px) {
-  .page > #quartz-body {
-    row-gap: 0;
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/static/fonts/PPEditorialNew-UltralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/static/fonts/PPEditorialNew-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/static/fonts/PPEditorialNew-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/static/fonts/PPEditorialNew-Ultrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("/static/fonts/PPEditorialNew-UltraboldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* PP Editorial Sans Font Family (for headers/UI) */
+@font-face {
+  font-family: "PP Editorial Sans";
+  src: url("/static/fonts/PPEditorialSans-Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial Sans";
+  src: url("/static/fonts/PPEditorialSans-UltralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial Sans";
+  src: url("/static/fonts/PPEditorialSans-Medium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial Sans";
+  src: url("/static/fonts/PPEditorialSans-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial Sans";
+  src: url("/static/fonts/PPEditorialSans-Ultrabold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial Sans";
+  src: url("/static/fonts/PPEditorialSans-Ultrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial Sans";
+  src: url("/static/fonts/PPEditorialSans-UltraboldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Advent Pro Font Family (for logo) */
+@font-face {
+  font-family: "Advent Pro";
+  src: url("/static/fonts/AdventPro-VariableFont_wdth,wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Advent Pro";
+  src: url("/static/fonts/AdventPro-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-style: italic;
+  font-display: swap;
+}
+
+// Custom font styling to match garnet-site
+:root {
+  --bodyFont: "PP Editorial New", Georgia, "Times New Roman", serif;
+  --headerFont: "PP Editorial Sans", Georgia, "Times New Roman", sans-serif;
+  --uiFont: "PP Editorial Sans", Georgia, "Times New Roman", sans-serif;
+}
+
+body {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+// Body text elements - match garnet-site line-height
+p, li, td, tbody {
+  line-height: 1.8;
+}
+
+// Links styled like garnet-site: underline instead of background highlight
+a {
+  font-weight: 200;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  background-color: transparent !important;
+  
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
   }
 }
 
-/* Remove leftover white sidebar strip on mobile */
-@media all and (max-width: 800px) {
-  .sidebar.left {
-    background-color: transparent !important;
-    padding: 0 !important;
+// Internal links - remove background highlight, use underline
+a.internal {
+  background-color: transparent !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  padding: 0;
+  border-radius: 0;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// External links
+a.external {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+// Headers use PP Editorial Sans with medium weight (500)
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: 500 !important;
+  line-height: 1.3;
+}
+
+// More specific selectors for article headers
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6,
+.article-title,
+.page-title {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: 500 !important;
+  line-height: 1.3;
+}
+
+// Article content - match garnet-site body styling
+article {
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 200;
+  
+  p, li {
+    line-height: 1.8;
+  }
+}
+
+// Table headers also use sans
+thead {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+// Strong/bold text - use ultrabold (800) for contrast with ultralight body
+strong, b {
+  font-weight: 800;
+}
+
+// Italic text
+em, i {
+  font-style: italic;
+}
+
+// UI elements use sans font - styled like garnet-site navbar
+.search .search-button {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: 400 !important;
+  
+  p {
+    font-weight: 400 !important;
+    font-size: 14px;
+  }
+}
+
+.search-container .search-space > input {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px;
+  
+  &::placeholder {
+    font-weight: 400 !important;
+  }
+}
+
+.search-container .result-card {
+  h3 {
+    font-family: "PP Editorial Sans", sans-serif !important;
+    font-weight: 500 !important;
+  }
+  
+  p {
+    font-family: "PP Editorial New", serif !important;
+    font-weight: 200 !important;
+    line-height: 1.6;
+  }
+}
+
+// Sliding pane spine uses sans - like garnet-site page titles
+.sliding-pane-spine {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px !important;
+}
+
+// TOC uses sans with garnet-site UI styling
+.toc {
+  font-family: "PP Editorial Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  
+  .depth-0 > a,
+  .depth-1 > a,
+  .depth-2 > a,
+  .depth-3 > a {
+    font-family: "PP Editorial Sans", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+// Explorer uses sans
+.explorer {
+  font-family: "PP Editorial Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  
+  a {
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+// Backlinks header uses sans
+.backlinks h3 {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 11px !important;
+}
+
+// Style the page footer (backlinks section) inside panes
+.page-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--lightgray);
+  // Add bottom margin for scroll space
+  margin-bottom: 6rem;
+  
+  .backlinks {
+    max-width: 100%;
+    
+    h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray);
+      margin-bottom: 0.5rem;
+    }
+    
+    ul {
+      padding-left: 1rem;
+      margin: 0;
+      max-width: 100%;
+      overscroll-behavior: auto !important;
+      
+      li {
+        margin-bottom: 0.25rem;
+        font-size: 14px;
+        font-family: "PP Editorial Sans", sans-serif;
+        font-weight: 400;
+        overflow: clip;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+        
+        a {
+          text-decoration: none;
+          
+          &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Blockquotes - elegant styling to match garnet-site aesthetic
+blockquote {
+  font-style: italic;
+  border-left: 2px solid var(--gray);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--darkgray);
+  
+  p {
+    margin: 0;
+  }
+}
+
+// Code blocks - slightly smaller for contrast with body text
+code {
+  font-size: 0.875em;
+}
+
+pre code {
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+// Breadcrumbs / navigation elements
+.breadcrumb-container {
+  font-family: "PP Editorial Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Tags
+.tags {
+  font-family: "PP Editorial Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  
+  a {
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+// Content metadata (dates, reading time, etc.)
+.content-meta {
+  font-family: "PP Editorial Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Hide section header anchor links (the # links next to headings)
+h1, h2, h3, h4, h5, h6 {
+  &[id] > a[href^="#"] {
+    display: none !important;
+  }
+}
+
+// Mobile-specific fixes
+@media (max-width: 800px) {
+  // Prevent horizontal scrolling on mobile
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+  
+  // Fix navbar to be sticky on mobile
+  .page > #quartz-body .sidebar.left {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+  }
+  
+  // Ensure the main container doesn't cause horizontal overflow
+  .page {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  .page > #quartz-body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  .center {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  .sliding-pane {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  .pane-content {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  // Ensure article content doesn't overflow
+  article {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  // Handle pre/code blocks that might cause overflow
+  pre {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+  
+  // Handle images that might be too wide
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  // Handle tables that might overflow
+  .table-container {
+    max-width: 100% !important;
+    overflow-x: auto !important;
   }
 }

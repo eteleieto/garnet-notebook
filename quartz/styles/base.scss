@@ -730,8 +730,11 @@ iframe.pdf {
   padding-top: 60px !important;
   /* Push content down for navbar */
   background-color: var(--light);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png");
-  background-repeat: repeat;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/static/store.png"), url("/static/paper.png");
+  background-repeat: repeat, no-repeat, repeat;
+  background-size: auto, 800px, auto;
+  background-position: center, right 10% center, center;
+  background-attachment: scroll, fixed, scroll;
 
   @media all and ($mobile) {
     padding-top: 50px !important;
@@ -745,9 +748,12 @@ iframe.pdf {
   width: 45rem;
   max-width: 90vw;
   background-color: var(--light);
-  /* Apply paper texture with 75% white overlay match */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png");
-  background-repeat: repeat;
+  /* Apply paper texture with 50% white overlay for better storefront visibility */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/static/paper.png");
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position: center, center;
+  background-attachment: scroll, scroll;
   overflow: hidden;
   /* Flex container, hide parent scroll */
   display: flex;
@@ -777,7 +783,11 @@ iframe.pdf {
   height: 100%;
   background: var(--light);
   /* Apply texture to spine too */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/static/paper.png");
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position: center, center;
+  background-attachment: scroll, scroll;
   border-right: 1px solid var(--lightgray);
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -831,6 +841,7 @@ footer {
 }
 
 @media all and (max-width: 800px) {
+
   /* Mobile: Show only active pane, hide sliding behavior */
   .center {
     overflow-x: hidden !important;
@@ -848,7 +859,8 @@ footer {
     position: relative;
     left: auto !important;
     box-shadow: none;
-    display: none; /* Hide all panes by default */
+    display: none;
+    /* Hide all panes by default */
     height: auto;
     min-height: calc(100vh - 50px);
   }

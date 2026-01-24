@@ -7,18 +7,13 @@ const Logo: QuartzComponent = ({ fileData, displayClass, cfg }: QuartzComponentP
     return (
         <h1 class={classNames(displayClass, "page-title")}>
             <a href={baseDir}>
-                <img src={`/static/logo.png`} alt={cfg.pageTitle} class="logo-image" />
+                garnet
             </a>
         </h1>
     )
 }
 
 Logo.css = `
-.logo-image {
-  height: 40px;
-  margin: 0;
-  vertical-align: middle;
-}
 `
 
 export default (() => Logo) satisfies QuartzComponentConstructor

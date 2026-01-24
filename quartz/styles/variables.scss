@@ -28,8 +28,7 @@ $mobileGrid: (
   templateColumns: "auto",
   rowGap: "5px",
   columnGap: "5px",
-  templateAreas:
-    '"grid-sidebar-left"\
+  templateAreas: '"grid-sidebar-left"\
       "grid-header"\
       "grid-center"\
       "grid-sidebar-right"\
@@ -37,22 +36,20 @@ $mobileGrid: (
 );
 $tabletGrid: (
   templateRows: "auto auto auto auto",
-  templateColumns: "#{$sidePanelWidth} auto",
+  templateColumns: "100%",
   rowGap: "5px",
   columnGap: "5px",
-  templateAreas:
-    '"grid-sidebar-left grid-header"\
-      "grid-sidebar-left grid-center"\
-      "grid-sidebar-left grid-sidebar-right"\
-      "grid-sidebar-left grid-footer"',
+  templateAreas: '"grid-header"\
+      "grid-center"\
+      "grid-sidebar-right"\
+      "grid-footer"',
 );
 $desktopGrid: (
   templateRows: "auto auto auto",
-  templateColumns: "#{$sidePanelWidth} auto #{$sidePanelWidth}",
+  templateColumns: "auto #{$sidePanelWidth}",
   rowGap: "5px",
   columnGap: "5px",
-  templateAreas:
-    '"grid-sidebar-left grid-header grid-sidebar-right"\
-      "grid-sidebar-left grid-center grid-sidebar-right"\
-      "grid-sidebar-left grid-footer grid-sidebar-right"',
+  templateAreas: '"grid-header grid-sidebar-right"\
+      "grid-center grid-sidebar-right"\
+      "grid-footer grid-sidebar-right"',
 );

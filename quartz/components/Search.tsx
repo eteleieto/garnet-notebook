@@ -20,12 +20,10 @@ export default ((userOpts?: Partial<SearchOptions>) => {
     return (
       <div class={classNames(displayClass, "search")}>
         <button class="search-button">
-          <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
-            <title>Search</title>
-            <g class="search-path" fill="none">
-              <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
-              <circle cx="8" cy="8" r="7" />
-            </g>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-path">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
           </svg>
           <p>{i18n(cfg.locale).components.search.title}</p>
         </button>

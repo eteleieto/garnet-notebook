@@ -30,18 +30,18 @@ function scrollPaneIntoView(pane: Element, behavior: ScrollBehavior = "smooth") 
   const container = getContainer() as HTMLElement
   if (!container || !pane) return
 
-  const containerRect = container.getBoundingClientRect()
-  const paneRect = pane.getBoundingClientRect()
+  const p = pane as HTMLElement
+  const containerWidth = container.clientWidth
+  const paneWidth = p.offsetWidth
+  const paneLeft = p.offsetLeft
 
-  // Calculate where we need to scroll to center the pane horizontally
-  const paneCenter = paneRect.left + paneRect.width / 2
-  const containerCenter = containerRect.left + containerRect.width / 2
-  const scrollOffset = paneCenter - containerCenter
+  // Calculate position to center the pane
+  const targetLeft = paneLeft - (containerWidth / 2) + (paneWidth / 2)
 
-  container.scrollBy({
-    left: scrollOffset,
-    top: 0, // Explicitly no vertical scrolling
-    behavior: behavior
+  container.scrollTo({
+    left: targetLeft,
+    top: 0,
+    behavior: behavior,
   })
 }
 
@@ -60,9 +60,20 @@ function updatePanePositions() {
 }
 
 function createSpine(doc: Document | HTMLElement, title?: string) {
+  const fileTitle =
+    doc instanceof Document ? doc.body?.dataset?.fileTitle : (doc as HTMLElement).dataset?.fileTitle
+  const slug =
+    doc instanceof Document ? doc.body?.dataset?.slug : (doc as HTMLElement).dataset?.slug
+  const normalizedSlug = slug?.toLowerCase()
+  const isHome =
+    normalizedSlug === "index" ||
+    normalizedSlug === "index.html" ||
+    normalizedSlug === "" ||
+    normalizedSlug === "/"
   const spine = document.createElement("div")
   spine.className = "sliding-pane-spine"
-  spine.innerText = title || doc.querySelector("h1")?.innerText || "Untitled"
+  spine.innerText =
+    (isHome ? "HOME" : fileTitle) || doc.querySelector("h1")?.innerText || title || "Untitled"
   spine.onclick = (e) => {
     e.stopPropagation()
     const pane = (e.target as HTMLElement).closest(PANE_SELECTOR)
@@ -119,7 +130,10 @@ function updateUrlState() {
   if (panes.length === 0) return
 
   // Store stacked slugs in URL
-  const stackedSlugs = panes.slice(1).map(p => (p as HTMLElement).dataset.slug).filter(Boolean)
+  const stackedSlugs = panes
+    .slice(1)
+    .map((p) => (p as HTMLElement).dataset.slug)
+    .filter(Boolean)
   const url = new URL(window.location.href)
 
   if (stackedSlugs.length > 0) {
@@ -140,12 +154,12 @@ async function appendPane(url: URL, scroll: boolean = true, replaceFromIndex?: n
   // Prune panes if replaceFromIndex is provided
   if (replaceFromIndex !== undefined && replaceFromIndex >= 0 && replaceFromIndex < panes.length) {
     const panesToRemove = panes.slice(replaceFromIndex + 1)
-    panesToRemove.forEach(p => p.remove())
+    panesToRemove.forEach((p) => p.remove())
     panes = getPanes()
   }
 
   // Optimistic check using URL
-  const existing = panes.find(p => (p as HTMLElement).dataset.url === url.href)
+  const existing = panes.find((p) => (p as HTMLElement).dataset.url === url.href)
   if (existing) {
     if (scroll) scrollPaneIntoView(existing)
     return
@@ -176,7 +190,7 @@ async function appendPane(url: URL, scroll: boolean = true, replaceFromIndex?: n
     newPane.dataset.url = url.href
 
     // Check for duplicates by slug after fetch (authoritative)
-    const existingBySlug = panes.find(p => (p as HTMLElement).dataset.slug === pageSlug)
+    const existingBySlug = panes.find((p) => (p as HTMLElement).dataset.slug === pageSlug)
     if (existingBySlug) {
       if (scroll) scrollPaneIntoView(existingBySlug)
       return
@@ -198,7 +212,6 @@ async function appendPane(url: URL, scroll: boolean = true, replaceFromIndex?: n
     }
 
     updateUrlState()
-
   } catch (e) {
     console.error(e)
     window.location.assign(url)
@@ -248,12 +261,20 @@ function init() {
   // Scroll Listener for Obscured State
   const containerEl = getContainer()
   if (containerEl) {
-    containerEl.addEventListener("scroll", () => {
-      checkObscured()
-    }, { passive: true })
-    window.addEventListener("resize", () => {
-      checkObscured()
-    }, { passive: true })
+    containerEl.addEventListener(
+      "scroll",
+      () => {
+        checkObscured()
+      },
+      { passive: true },
+    )
+    window.addEventListener(
+      "resize",
+      () => {
+        checkObscured()
+      },
+      { passive: true },
+    )
   }
 
   // Event Listeners
@@ -303,7 +324,8 @@ function init() {
   })
 
   // Expose for debugging
-  window.spaNavigate = (url) => appendPane(url instanceof URL ? url : new URL(url, window.location.origin))
+  window.spaNavigate = (url) =>
+    appendPane(url instanceof URL ? url : new URL(url, window.location.origin))
 
   // Initial check
   checkObscured()

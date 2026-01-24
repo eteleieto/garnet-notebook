@@ -11,6 +11,13 @@ import { GlobalConfiguration } from "../cfg"
 import { i18n } from "../i18n"
 import { styleText } from "util"
 
+function fileTitleFromPath(fp: unknown): string | undefined {
+  if (typeof fp !== "string" || fp.length === 0) return
+  const lastSegment = fp.split("/").filter(Boolean).at(-1)
+  if (!lastSegment) return
+  return lastSegment.replace(/\.[^/.]+$/, "")
+}
+
 interface RenderComponents {
   head: QuartzComponent
   header: QuartzComponent[]
@@ -26,20 +33,22 @@ const headerRegex = new RegExp(/h[1-6]/)
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
+  buildId?: string,
 ): StaticResources {
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
+  const versionSuffix = buildId ? `?v=${buildId}` : ""
 
   const resources: StaticResources = {
     css: [
       {
-        content: joinSegments(baseDir, "index.css"),
+        content: joinSegments(baseDir, "index.css") + versionSuffix,
       },
       ...staticResources.css,
     ],
     js: [
       {
-        src: joinSegments(baseDir, "prescript.js"),
+        src: joinSegments(baseDir, "prescript.js") + versionSuffix,
         loadTime: "beforeDOMReady",
         contentType: "external",
       },
@@ -55,7 +64,7 @@ export function pageResources(
   }
 
   resources.js.push({
-    src: joinSegments(baseDir, "postscript.js"),
+    src: joinSegments(baseDir, "postscript.js") + versionSuffix,
     loadTime: "afterDOMReady",
     moduleType: "module",
     contentType: "external",
@@ -259,10 +268,16 @@ export function renderPage(
 
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const direction = i18n(cfg.locale).direction ?? "ltr"
+  const slugNormalized = slug?.toLowerCase()
+  const fileTitle =
+    slugNormalized === "index"
+      ? "HOME"
+      : (fileTitleFromPath(componentData.fileData.relativePath) ??
+        fileTitleFromPath(componentData.fileData.filePath))
   const doc = (
     <html lang={lang} dir={direction}>
       <Head {...componentData} />
-      <body data-slug={slug}>
+      <body data-slug={slug} data-file-title={fileTitle}>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}

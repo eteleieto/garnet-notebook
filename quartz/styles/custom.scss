@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 /* PP Editorial New Font Family */
 @font-face {
@@ -132,10 +133,19 @@ body {
   font-weight: 200;
   font-size: 16px;
   line-height: 1.8;
+  background-color: var(--light);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/store.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 // Body text elements - match garnet-site line-height
-p, li, td, tbody {
+p,
+li,
+td,
+tbody {
   line-height: 1.8;
 }
 
@@ -146,7 +156,7 @@ a {
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
   background-color: transparent !important;
-  
+
   &:hover {
     opacity: 0.7;
     transition: opacity 0.2s ease;
@@ -161,7 +171,7 @@ a.internal {
   text-underline-offset: 4px;
   padding: 0;
   border-radius: 0;
-  
+
   &:hover {
     opacity: 0.7;
   }
@@ -175,7 +185,12 @@ a.external {
 }
 
 // Headers use PP Editorial Sans with medium weight (500)
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "PP Editorial Sans", sans-serif !important;
   font-weight: 500 !important;
   line-height: 1.3;
@@ -200,8 +215,9 @@ article {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 200;
-  
-  p, li {
+
+  p,
+  li {
     line-height: 1.8;
   }
 }
@@ -213,12 +229,14 @@ thead {
 }
 
 // Strong/bold text - use ultrabold (800) for contrast with ultralight body
-strong, b {
+strong,
+b {
   font-weight: 800;
 }
 
 // Italic text
-em, i {
+em,
+i {
   font-style: italic;
 }
 
@@ -226,18 +244,18 @@ em, i {
 .search .search-button {
   font-family: "PP Editorial Sans", sans-serif !important;
   font-weight: 400 !important;
-  
+
   p {
     font-weight: 400 !important;
     font-size: 14px;
   }
 }
 
-.search-container .search-space > input {
+.search-container .search-space>input {
   font-family: "PP Editorial Sans", sans-serif !important;
   font-weight: 400 !important;
   font-size: 14px;
-  
+
   &::placeholder {
     font-weight: 400 !important;
   }
@@ -248,7 +266,7 @@ em, i {
     font-family: "PP Editorial Sans", sans-serif !important;
     font-weight: 500 !important;
   }
-  
+
   p {
     font-family: "PP Editorial New", serif !important;
     font-weight: 200 !important;
@@ -270,15 +288,15 @@ em, i {
   font-family: "PP Editorial Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  
-  .depth-0 > a,
-  .depth-1 > a,
-  .depth-2 > a,
-  .depth-3 > a {
+
+  .depth-0>a,
+  .depth-1>a,
+  .depth-2>a,
+  .depth-3>a {
     font-family: "PP Editorial Sans", sans-serif;
     font-weight: 400;
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -292,10 +310,10 @@ em, i {
   font-family: "PP Editorial Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  
+
   a {
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -320,10 +338,10 @@ em, i {
   border-top: 1px solid var(--lightgray);
   // Add bottom margin for scroll space
   margin-bottom: 6rem;
-  
+
   .backlinks {
     max-width: 100%;
-    
+
     h3 {
       font-size: 11px;
       text-transform: uppercase;
@@ -331,13 +349,13 @@ em, i {
       color: var(--gray);
       margin-bottom: 0.5rem;
     }
-    
+
     ul {
       padding-left: 1rem;
       margin: 0;
       max-width: 100%;
       overscroll-behavior: auto !important;
-      
+
       li {
         margin-bottom: 0.25rem;
         font-size: 14px;
@@ -347,10 +365,10 @@ em, i {
         text-overflow: ellipsis;
         white-space: nowrap;
         max-width: 100%;
-        
+
         a {
           text-decoration: none;
-          
+
           &:hover {
             text-decoration: underline;
             text-decoration-thickness: 1px;
@@ -369,7 +387,7 @@ blockquote {
   padding-left: 1.5rem;
   margin: 1.5rem 0;
   color: var(--darkgray);
-  
+
   p {
     margin: 0;
   }
@@ -399,10 +417,10 @@ pre code {
   font-family: "PP Editorial Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  
+
   a {
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -421,23 +439,55 @@ pre code {
   letter-spacing: 0.05em;
 }
 
+// Reduce excessive top spacing for all notes (sliding pane layout)
+// (base styles apply $topSpacing via a higher-specificity selector using #quartz-body)
+.pane-content {
+  padding-top: 4rem !important;
+  position: relative;
+}
+
+.content-meta {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  float: none !important;
+  margin: 0 !important;
+}
+
+.page>#quartz-body .page-header {
+  margin: 0 0 1rem 0 !important;
+  padding-top: 0 !important;
+}
+
+.page>#quartz-body .page-header .article-title {
+  margin-top: 0 !important;
+  text-align: center;
+}
+
 // Hide section header anchor links (the # links next to headings)
-h1, h2, h3, h4, h5, h6 {
-  &[id] > a[href^="#"] {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &[id]>a[href^="#"] {
     display: none !important;
   }
 }
 
 // Mobile-specific fixes
 @media (max-width: 800px) {
+
   // Prevent horizontal scrolling on mobile
-  html, body {
+  html,
+  body {
     overflow-x: hidden !important;
     max-width: 100% !important;
   }
-  
+
   // Fix navbar to be sticky on mobile
-  .page > #quartz-body .sidebar.left {
+  .page>#quartz-body .sidebar.left {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
@@ -445,33 +495,34 @@ h1, h2, h3, h4, h5, h6 {
     width: 100% !important;
     z-index: 10000 !important;
   }
-  
+
   // Ensure the main container doesn't cause horizontal overflow
   .page {
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
-  
-  .page > #quartz-body {
+
+  .page>#quartz-body {
     max-width: 100% !important;
     overflow-x: hidden !important;
+    padding: 0 !important;
   }
-  
+
   .center {
     max-width: 100% !important;
     width: 100% !important;
   }
-  
+
   .sliding-pane {
     max-width: 100% !important;
     width: 100% !important;
   }
-  
+
   .pane-content {
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
-  
+
   // Ensure article content doesn't overflow
   article {
     max-width: 100% !important;
@@ -479,22 +530,49 @@ h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
-  
+
   // Handle pre/code blocks that might cause overflow
   pre {
     max-width: 100% !important;
     overflow-x: auto !important;
   }
-  
+
   // Handle images that might be too wide
   img {
     max-width: 100% !important;
     height: auto !important;
   }
-  
+
   // Handle tables that might overflow
   .table-container {
     max-width: 100% !important;
     overflow-x: auto !important;
+  }
+}
+
+// Fixed Header Implementation - Global Top Right
+header {
+  position: fixed !important;
+  top: 1rem;
+  right: 1rem;
+  width: auto;
+  margin: 0 !important;
+  z-index: 10000;
+  background: transparent;
+  gap: 1rem !important;
+  pointer-events: auto;
+}
+
+// Ensure no ghost left sidebar elements remain
+.page>#quartz-body .sidebar.left {
+  display: none !important;
+}
+
+// Remove reserved top space (fixes background texture start)
+.center {
+  padding-top: 0 !important;
+
+  @media all and ($mobile) {
+    padding-top: 0 !important;
   }
 }

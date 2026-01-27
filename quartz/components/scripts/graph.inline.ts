@@ -85,7 +85,6 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     opacityScale,
     removeTags,
     showTags,
-    focusOnHover,
     enableRadial,
   } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
@@ -250,29 +249,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   let dragging = false
 
   function renderLinks() {
-    tweens.get("link")?.stop()
-    const tweenGroup = new TweenGroup()
-
     for (const l of linkRenderData) {
-      let alpha = 1
-
-      // if we are hovering over a node, we want to highlight the immediate neighbours
-      // with full alpha and the rest with default alpha
-      if (hoveredNodeId) {
-        alpha = l.active ? 1 : 0.2
-      }
-
       l.color = l.active ? computedStyleMap["--gray"] : computedStyleMap["--lightgray"]
-      tweenGroup.add(new Tweened<LinkRenderData>(l).to({ alpha }, 200))
     }
-
-    tweenGroup.getAll().forEach((tw) => tw.start())
-    tweens.set("link", {
-      update: tweenGroup.update.bind(tweenGroup),
-      stop() {
-        tweenGroup.getAll().forEach((tw) => tw.stop())
-      },
-    })
   }
 
   function renderLabels() {
@@ -317,27 +296,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   }
 
   function renderNodes() {
-    tweens.get("hover")?.stop()
-
-    const tweenGroup = new TweenGroup()
-    for (const n of nodeRenderData) {
-      let alpha = 1
-
-      // if we are hovering over a node, we want to highlight the immediate neighbours
-      if (hoveredNodeId !== null && focusOnHover) {
-        alpha = n.active ? 1 : 0.2
-      }
-
-      tweenGroup.add(new Tweened<Graphics>(n.gfx, tweenGroup).to({ alpha }, 200))
-    }
-
-    tweenGroup.getAll().forEach((tw) => tw.start())
-    tweens.set("hover", {
-      update: tweenGroup.update.bind(tweenGroup),
-      stop() {
-        tweenGroup.getAll().forEach((tw) => tw.stop())
-      },
-    })
+    // No-op: dimming removed for performance
   }
 
   function renderPixiFromD3() {
@@ -405,6 +364,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         oldLabelOpacity = label.alpha
         if (!dragging) {
           renderPixiFromD3()
+          startAnimation()
         }
       })
       .on("pointerleave", () => {
@@ -412,6 +372,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         label.alpha = oldLabelOpacity
         if (!dragging) {
           renderPixiFromD3()
+          startAnimation()
         }
       })
 
@@ -467,6 +428,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           }
           dragStartTime = Date.now()
           dragging = true
+          startAnimation()
         })
         .on("drag", function dragged(event) {
           const initPos = event.subject.__initialDragPos
@@ -519,13 +481,29 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
               label.alpha = scaleOpacity
             }
           }
+
+          startAnimation()
         }),
     )
   }
 
   let stopAnimation = false
+  let animationRunning = false
+  const ALPHA_THRESHOLD = 0.01
+
+  function startAnimation() {
+    if (!animationRunning && !stopAnimation) {
+      animationRunning = true
+      requestAnimationFrame(animate)
+    }
+  }
+
   function animate(time: number) {
-    if (stopAnimation) return
+    if (stopAnimation) {
+      animationRunning = false
+      return
+    }
+
     for (const n of nodeRenderData) {
       const { x, y } = n.simulationData
       if (!x || !y) continue
@@ -546,10 +524,19 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     tweens.forEach((t) => t.update(time))
     app.renderer.render(stage)
-    requestAnimationFrame(animate)
+
+    // Check if we should continue animating
+    const hasActiveTweens = tweens.size > 0
+    const simulationActive = simulation.alpha() > ALPHA_THRESHOLD
+
+    if (simulationActive || hasActiveTweens || dragging) {
+      requestAnimationFrame(animate)
+    } else {
+      animationRunning = false
+    }
   }
 
-  requestAnimationFrame(animate)
+  startAnimation()
   return () => {
     stopAnimation = true
     app.destroy()
@@ -595,14 +582,32 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     document.removeEventListener("themechange", handleThemeChange)
   })
 
-  const containers = [...document.getElementsByClassName("global-graph-outer")] as HTMLElement[]
-  
-  // Move containers to body to escape navbar stacking context
-  for (const container of containers) {
-    if (container.parentElement !== document.body) {
-      document.body.appendChild(container)
+  // Only keep one global graph container to prevent stacking overlays
+  const allContainers = [...document.getElementsByClassName("global-graph-outer")] as HTMLElement[]
+
+  // Remove duplicates - keep only the first one in the body, or move the first one there
+  const existingInBody = allContainers.filter((c) => c.parentElement === document.body)
+  const notInBody = allContainers.filter((c) => c.parentElement !== document.body)
+
+  // If we already have one in body, remove any others and don't add new ones
+  if (existingInBody.length > 0) {
+    // Keep only the first one in body
+    for (let i = 1; i < existingInBody.length; i++) {
+      existingInBody[i].remove()
+    }
+    // Remove ones not in body (duplicates from new page content)
+    for (const c of notInBody) {
+      c.remove()
+    }
+  } else if (notInBody.length > 0) {
+    // Move the first one to body, remove the rest
+    document.body.appendChild(notInBody[0])
+    for (let i = 1; i < notInBody.length; i++) {
+      notInBody[i].remove()
     }
   }
+
+  const containers = [...document.body.querySelectorAll(".global-graph-outer")] as HTMLElement[]
 
   async function renderGlobalGraph() {
     const slug = getFullSlug(window)

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <pattern id="ironTexture" patternUnits="userSpaceOnUse" width="64" height="64">
+      <image href="data:image/jpeg;base64,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" width="64" height="64" preserveAspectRatio="xMidYMid slice"/>
+    </pattern>
+    <mask id="hollowMask">
+      <rect width="32" height="32" fill="white"/>
+      <circle cx="16" cy="16" r="3.5" fill="black"/>
+    </mask>
+  </defs>
+  <!-- Shadow -->
+  <g transform="translate(1,1)" opacity="0.3">
+    <circle cx="16" cy="7" r="6" fill="black"/>
+    <circle cx="25" cy="16" r="6" fill="black"/>
+    <circle cx="16" cy="25" r="6" fill="black"/>
+    <circle cx="7" cy="16" r="6" fill="black"/>
+  </g>
+  <!-- Main quatrefoil with texture and hollow center -->
+  <g mask="url(#hollowMask)">
+    <circle cx="16" cy="7" r="6" fill="url(#ironTexture)" stroke="#1a1a1a" stroke-width="0.4"/>
+    <circle cx="25" cy="16" r="6" fill="url(#ironTexture)" stroke="#1a1a1a" stroke-width="0.4"/>
+    <circle cx="16" cy="25" r="6" fill="url(#ironTexture)" stroke="#1a1a1a" stroke-width="0.4"/>
+    <circle cx="7" cy="16" r="6" fill="url(#ironTexture)" stroke="#1a1a1a" stroke-width="0.4"/>
+  </g>
+</svg>

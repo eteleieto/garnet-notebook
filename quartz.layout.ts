@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.Search(),
     Component.Graph({ iconOnly: true }),
   ],
-  afterBody: [Component.Backlinks()],
+  afterBody: [Component.Backlinks(), Component.ImageLightbox()],
   footer: Component.Footer(),
 }
 

@@ -30,16 +30,23 @@ function scrollPaneIntoView(pane: Element, behavior: ScrollBehavior = "smooth") 
   const container = getContainer() as HTMLElement
   if (!container || !pane) return
 
-  const p = pane as HTMLElement
-  const containerWidth = container.clientWidth
-  const paneWidth = p.offsetWidth
-  const paneLeft = p.offsetLeft
+  const panes = getPanes()
+  const paneIndex = panes.indexOf(pane)
+  if (paneIndex === -1) return
 
-  // Calculate position to center the pane
-  const targetLeft = paneLeft - (containerWidth / 2) + (paneWidth / 2)
+  // Compute the natural horizontal position of the pane (sum of prior pane widths),
+  // then offset by the sticky spine widths so earlier spines remain visible.
+  let targetLeft = 0
+  for (let i = 0; i < paneIndex; i++) {
+    targetLeft += (panes[i] as HTMLElement).offsetWidth
+  }
+  targetLeft = targetLeft - paneIndex * PANE_WIDTH
+
+  const maxLeft = container.scrollWidth - container.clientWidth
+  const clampedLeft = Math.max(0, Math.min(targetLeft, maxLeft))
 
   container.scrollTo({
-    left: targetLeft,
+    left: clampedLeft,
     top: 0,
     behavior: behavior,
   })

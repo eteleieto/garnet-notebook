@@ -187,7 +187,11 @@ function highlightHTML(searchTerm: string, el: HTMLElement) {
   return html.body
 }
 
-async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: ContentIndex) {
+async function setupSearch(
+  searchElement: Element,
+  currentSlug: FullSlug,
+  getData: () => Promise<ContentIndex>,
+) {
   const container = searchElement.querySelector(".search-container") as HTMLElement
   if (!container) return
 
@@ -205,7 +209,21 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
   const searchLayout = container.querySelector(".search-layout") as HTMLElement
   if (!searchLayout) return
 
-  const idDataMap = Object.keys(data) as FullSlug[]
+  let data: ContentIndex | null = null
+  let idDataMap: FullSlug[] = []
+  let ensureIndexPromise: Promise<void> | null = null
+
+  const ensureIndex = async () => {
+    if (!ensureIndexPromise) {
+      ensureIndexPromise = (async () => {
+        data = await getData()
+        idDataMap = Object.keys(data) as FullSlug[]
+        await fillDocument(data)
+      })()
+    }
+
+    return ensureIndexPromise
+  }
   const appendLayout = (el: HTMLElement) => {
     searchLayout.appendChild(el)
   }
@@ -239,6 +257,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     searchType = searchTypeNew
     container.classList.add("active")
     searchBar.focus()
+    void ensureIndex()
   }
 
   let currentHover: HTMLInputElement | null = null
@@ -313,9 +332,12 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     return {
       id,
       slug,
-      title: searchType === "tags" ? data[slug].title : highlight(term, data[slug].title ?? ""),
-      content: highlight(term, data[slug].content ?? "", true),
-      tags: highlightTags(term.substring(1), data[slug].tags),
+      title:
+        searchType === "tags"
+          ? data![slug].title
+          : highlight(term, data![slug].title ?? ""),
+      content: highlight(term, data![slug].content ?? "", true),
+      tags: highlightTags(term.substring(1), data![slug].tags),
     }
   }
 
@@ -438,6 +460,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
 
   async function onType(e: HTMLElementEventMap["input"]) {
     if (!searchLayout || !index) return
+    await ensureIndex()
     currentSearchTerm = (e.target as HTMLInputElement).value
     searchLayout.classList.toggle("display-results", currentSearchTerm !== "")
     searchType = currentSearchTerm.startsWith("#") ? "tags" : "basic"
@@ -502,7 +525,6 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
   window.addCleanup(() => searchBar.removeEventListener("input", onType))
 
   registerEscapeHandler(container, hideSearch)
-  await fillDocument(data)
 }
 
 /**
@@ -533,9 +555,8 @@ async function fillDocument(data: ContentIndex) {
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const currentSlug = e.detail.url
-  const data = await fetchData
   const searchElement = document.getElementsByClassName("search")
   for (const element of searchElement) {
-    await setupSearch(element, currentSlug, data)
+    await setupSearch(element, currentSlug, () => fetchData())
   }
 })

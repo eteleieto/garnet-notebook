@@ -36,7 +36,10 @@ export function pageResources(
   buildId?: string,
 ): StaticResources {
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
-  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
+  const contentIndexScript = `const fetchData = (() => {
+    let cache
+    return () => (cache ??= fetch("${contentIndexPath}").then((data) => data.json()))
+  })()`
   const versionSuffix = buildId ? `?v=${buildId}` : ""
 
   const resources: StaticResources = {

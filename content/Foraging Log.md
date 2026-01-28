@@ -12,11 +12,11 @@ Walk in River Road Preserve. Autumn olives on the upper edge of the Shepaug Rive
 
 About 5 pounds of Resinous Polypore. Will make a garum and mushroom salt from them. 
 
-![[99104A34-D73A-4E76-AFE5-180AD54A6B20.jpg|400]]
+![[99104A34-D73A-4E76-AFE5-180AD54A6B20.webp|400]]
 ###### Sept 27th, 2025
 Oyster mushrooms!
 
 ###### Sept 25th, 2025
 Autumn Olives and wild Concord Grapes. Only about 85 grams of each. Simply lacto-fermenting them.
 
-![[Screenshot 2025-10-01 at 4.57.24 PM.png|400]]
+![[Screenshot 2025-10-01 at 4.57.24 PM.webp|400]]

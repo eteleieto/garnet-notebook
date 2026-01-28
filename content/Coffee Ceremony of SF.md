@@ -11,9 +11,9 @@ Our ceremonies were hosted in a well-care for victorian home owned by the SF Zen
 
 We brought in wood slabs from [Ponderosa Millworks](https://ponderosamillworks.com/), beautiful ceramics from [Yeogi-Damki](https://mogutable.com/collections/yeogi-damki), glassware from [Peter Dupont and Breanna Box](https://seeyouinheven.com/), handmade mulberry paper, and custom drawings from Neel's friend, among other items. 
 
-![[DSC_0001.jpg|300]] ![[DSC_0003.jpg|300]]  
-![[DSC_0025.jpg|300]] ![[DSC_0013.jpg|300]]
-![[DSC_0015.jpg|300]] ![[DSC_0019.jpg|300]]
+![[DSC_0001.webp|300]] ![[DSC_0003.webp|300]]  
+![[DSC_0025.webp|300]] ![[DSC_0013.webp|300]]
+![[DSC_0015.webp|300]] ![[DSC_0019.webp|300]]
 *Thanks to [Agniv Sarkar](https://agniv.me/), one of our attendees, for taking some of these wonderful images.* 
 
 

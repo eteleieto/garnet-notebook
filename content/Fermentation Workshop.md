@@ -95,7 +95,7 @@ Cards prompted people to reach out to us, by phone or email, with questions on t
 People sent texts and videos, and calls, seeking clarity on the nature of their observations. Is this clouded water okay? There is a light film on the top, what is that? I tasted it, and it tastes good, when do I know when it's done? 
 
 
-![[Screenshot 2025-09-25 at 4.40.35 PM.png]]
+![[Screenshot 2025-09-25 at 4.40.35 PM.webp]]
 
 
 In Part 2, a smaller group came together, bringing their ferments along with. We took each, ensured their safety, and dished them out on sample plates for a tasting and conversation. The ferments came out beautifully, with great lactic depth and diversity. Highlights included a cucumber and ground cherry ferment and a bok choy and grape ferment. 
@@ -112,7 +112,7 @@ After this conversation, we moved to the table for lunch: a pot of wild rice, a 
 Each participant ceremoniously added a bit of their ferment liquid into the pot of rice, not dissimilar from adding vinegar to sushi rice. 
 
 
-![[IMG_4313.mov]]
+![[IMG_4313.mp4]]
 
 
 

@@ -6,7 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
     Component.Spacer(),
-    Component.Search(),
+    Component.Search({ enablePreview: false }),
     Component.Graph({ iconOnly: true }),
   ],
   afterBody: [Component.Backlinks(), Component.ImageLightbox()],

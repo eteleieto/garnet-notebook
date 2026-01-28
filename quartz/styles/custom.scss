@@ -3,12 +3,12 @@
 
 /* Custom Quatrefoil Cursor - Textured wrought iron with 3D effect */
 html, body {
-  cursor: url("/static/quatrefoil-cursor-shadow-v3.png") 16 16, auto;
+  cursor: url("/static/quatrefoil-cursor-shadow-24.png") 12 12, auto;
 }
 
 /* Pointer cursor for interactive elements */
 a, button, [role="button"], input[type="submit"], input[type="button"], .clickable {
-  cursor: url("/static/quatrefoil-pointer-shadow-v3.png") 16 16, pointer;
+  cursor: url("/static/quatrefoil-pointer-shadow-24.png") 12 12, pointer;
 }
 
 /* PP Editorial New Font Family */
@@ -130,7 +130,12 @@ body {
   font-size: 16px;
   line-height: 1.8;
   background-color: var(--light);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/store.png");
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+    image-set(
+      url("/static/store.webp") type("image/webp"),
+      url("/static/store.png") type("image/png")
+    );
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -489,6 +494,9 @@ h6 {
 
 // Mobile-specific fixes
 @media (max-width: 800px) {
+  body {
+    background-attachment: scroll;
+  }
 
   // Prevent horizontal scrolling on mobile
   html,

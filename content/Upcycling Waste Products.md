@@ -1,0 +1,16 @@
+- bakeries
+	- ACQ bread
+	- Bagels
+- breweries
+	- hana makgeloi
+	- United Ferments
+	- Brooklyn Kura
+	- Talea
+	- Wild East Brewing
+- Bars
+	- peels
+- wineries 
+- oil press places
+- soymilk / plant milk makers
+	- Fong On
+- Coffe Grounds

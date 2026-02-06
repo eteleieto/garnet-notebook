@@ -1,0 +1,1 @@
+"More than anything I wanted freedom. I wanted Smithereens to be a place to explore new ideas, to innovate, to be creative, to mess around. All the things that make cooking actually fun. Smithereens should embody the restless energy of a group of people that want to share the things they find delicious and cool." from smithereens owner

@@ -8,6 +8,11 @@ Welcome to the notebook of Garnet, a restaurant opening up in Brooklyn in 2026.
 
 To view previous gatherings, please see the notes from [[Wine as Experience]],  [[Fermentation Workshop]] or [[Coffee Ceremony of SF]]
 
+
+
+- Garnet Menus
+- andy matsuchak style entrances into things...
+
 ##### Recent Notes
 [[Foraging Log]]
 

@@ -1,0 +1,4 @@
+- relationship-driven, we work with great people
+- seasonality and taste first - always ask what is good
+- labor practices, farming practices, and values, etc... matter
+- sourcing informs menu, not other way around...

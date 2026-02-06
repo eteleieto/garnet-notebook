@@ -1,0 +1,2 @@
+- some events only listed irl. some bookings only irl. etc..
+- space is open, coe say hi, read a book, not serving you... getting set up, but excited to open for lunch soon.

@@ -1,0 +1,3 @@
+crafts people
+farmers
+friends

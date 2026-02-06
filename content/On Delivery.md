@@ -1,0 +1,1 @@
+We won't do delivery. Many restaurants offer delivery. This is a place you come in person. There are many places to get food from. This is an experience that can't be abstracted from being here. 

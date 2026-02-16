@@ -1,0 +1,1 @@
+fascinated with communes, co-living, co-housing, alt educational projects, and utopic projects... mostly bring people out of the city. close to nature, democratice

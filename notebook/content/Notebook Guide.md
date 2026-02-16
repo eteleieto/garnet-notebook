@@ -17,10 +17,10 @@ For each kind of note, how is it done
 
 
 ### Templates
-[[Template/idea]] 
-[[Template/essay]]
-[[Template/menu]]
-[[Template/Gathering]]
+[[Idea]] 
+[[Essay]]
+[[menu]]
+[[Gathering]]
 
 
 

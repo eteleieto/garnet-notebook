@@ -16,6 +16,11 @@ eating is agriclautral act [[wendell berry]]
 
 [[Matthew Strother]] had this parable of sorts, shared to us by his stepfather, about the sesame seed, which he shared before a meal at a monastery. The sesame seed has 72 lives. The farmer, the soil, the practices of the people before them who organized such soil, the center where it was hulled, repackaged and shipped, the person who made packagaing, and shipped that packagaing, and the truck, and when it arrived someone received it, and then unpacked it, and the chef who determined it should be on this plate... and he lists out 72 acts which precede the sesame seed being here. 
 
+and too, the perseon who fermented last month, who saved the seeds, who planted the tree, who took care of the soil, and each of you... these folks, this land, are all responsible for this moment. 
+
+to have as part of daily life, the communal meal, and the gratitude of reliance. the city as highly reliant, and yet the place of the individual. 
+
+
 now, this is a very complex web... and its relation are spread... when we do this for items of this region, we direct our relational development towards this area, we deepen our relationship with the region in which we live. 
 
 Embedded in this 

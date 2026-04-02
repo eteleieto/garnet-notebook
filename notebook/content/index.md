@@ -1,5 +1,5 @@
 ---
-title: Garnet's Notebook
+title: The Notebook
 date:
 ---
 Welcome to the notebook of Garnet, a restaurant opening up in Brooklyn in 2026.
@@ -29,6 +29,5 @@ To view previous gatherings, please see the notes from [[Wine as Experience]],  
 2. [[Trial – Wine as Experience|Wine as Experience Trial]]
 3. [[Coffee Ceremony of SF]]
 4. [[Daylight Night Market]]
-
 
 

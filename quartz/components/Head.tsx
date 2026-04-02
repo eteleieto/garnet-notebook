@@ -39,6 +39,11 @@ export default (() => {
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        <link rel="preconnect" href="https://typographer.io/" />
+        <link
+          rel="stylesheet"
+          href="https://typographer.io/1/users/1dd67ed2c191927bf91d474c60a2892bf471e7dc77d09328e7f59e8df4a0e42e/e5b96130204556f3cda497cc73993d600be3f92f7249e70d22edbafcd64e724f/css?token=b163697922"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Amarna:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet" />

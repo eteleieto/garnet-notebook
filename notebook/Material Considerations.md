@@ -59,3 +59,7 @@ to respect the material used
 objects of ritual. why? repetition = meaning. 
 
 Shakers were the most successful communitarian society in American history… playing off of analogue historical colonial new england, communitarian values, etc..
+
+ceramics
+- clay forward, earth colors, not austere but not busy
+- soft lines, tactile and texture

@@ -76,3 +76,18 @@ Dessert
 Take-home
 
 **
+
+
+we take inspirtion form kaiseki, shojin ryori, but not a japanese restaurant. influences from everywhere, but disticntly northeastern food. 
+
+food not east to categorize, because when you say northeastern cuisine what do you think? 
+
+we buy best produce, from places that care for earth and people, and tends to most nutritous too. because we buy local, our menu changes all the time
+
+we also dont serve highly refined products. we have no white sugar, anywhere in the kitchen. 
+
+incdreibly produce going to long isnaldn, judson valley, western ma, coastal maine, etc..
+
+we dont serve meat or meat derived products. 
+
+"At some moments along the menu, guests will be encouraged to share with dining companion; at other moments, they will be offered individual plates."

@@ -4,7 +4,11 @@ tags:
   - evergreen
 date: 2025-08-30
 ---
+**April 22nd, 2025**
+Several pounds of ramp, with many dozens of more, at on squire road. Yarrow, orpine, and wild chive too.
 
+**April 21st, 2025**
+Walk in Hidden River Preserve. Young eastern pine tips, to be preserved in salt, fiddleheads, dandelion, young beech leaves, and birch branches. 
 ###### October 2nd, 2025
 Walk in River Road Preserve. Autumn olives on the upper edge of the Shepaug River. A few black walnuts as well. Autumn olives are being dehydrated, and then will likely have them as part of a stuffing for a pumpkin dish I'll serve at the [[16 Cubits]] event this weekend.
 

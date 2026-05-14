@@ -1,3 +1,15 @@
+
+social science research sucks. 
+
+https://www.sciencedirect.com/science/article/pii/S1878450X25000708#bib26
+- interview 9 people, most of which are personal network. 
+- restaurant has recurring people
+
+
+
+
+
+
 research and prototype, open source
 
 **

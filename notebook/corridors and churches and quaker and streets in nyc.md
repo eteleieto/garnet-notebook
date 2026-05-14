@@ -1,0 +1,1 @@
+![](https://miro.medium.com/v2/resize:fit:1400/1*PZ0vNN6-24Q697uK1w84PQ.jpeg)

@@ -8,5 +8,7 @@ i think industrial agriculture was a break from our spiritual connection with wh
 
 i think our values arise, more than anything else, out of the way we feed ourselves. the what and the how, the food and the setting. 
 
+[[Developing a regional cuisine]]
+
 [[Garnet's commitment to Regionalism]]
 

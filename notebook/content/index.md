@@ -1,33 +1,8 @@
 ---
-title: The Notebook
+title: Garnet's Notebook
 date:
 ---
-Welcome to the notebook of Garnet, a restaurant opening up in Brooklyn in 2026.
+Welcome to the notebook of Garnet, a restaurant opening up in Brooklyn Heights in 2026.ithub
 
 >This notebook is currently being constructed.
-
-To view previous gatherings, please see the notes from [[Wine as Experience]],  [[Fermentation Workshop]] or [[Coffee Ceremony of SF]]
-
-
-
-- Garnet Menus
-- andy matsuchak style entrances into things...
-
-##### Recent Notes
-[[Foraging Log]]
-
-##### Upcoming Gatherings
-1. [[An Evening of Northeastern Grains]]
-2. [[Wine as Experience]]
-3. [[16 Cubits]]
-4. The Metaphysics of the Restaurant 
-5. Mold Dinner
-6. Tools for Thinking in Food
-
-##### Previous Gatherings
-1. [[Fermentation Workshop]]
-2. [[Trial – Wine as Experience|Wine as Experience Trial]]
-3. [[Coffee Ceremony of SF]]
-4. [[Daylight Night Market]]
-
 

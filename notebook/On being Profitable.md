@@ -1,0 +1,2 @@
+
+you want time off, better pay, holidays with friends, time for thinking and proper rest... the restaurant needs to make money. and more than it currently does. and i dont think we have to compromise to make that happen. i think we can align a great experience with that. 

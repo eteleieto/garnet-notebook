@@ -52,6 +52,7 @@ The aim of this document is to establish those both. To have language that can b
 [[Documentation]]
 [[Entrances]]
 [[Connective Artifacts]]
+[[Visual Images and Social Media]]
 ##### Notes
 - there are pillars of meaning (belonging, regionalism, urbanism etc..) and patterns of illustration which serve as abstracted forms of these pillars of meaning... 
 - how do we incorporate the repetition and the icons and such of black mountain college and pattern language
@@ -76,8 +77,23 @@ There should be continuity across branding, experience, interiors, socials, webs
 
 ### Design Values
 
+Simple and honest materials and design, influenced by colonial new england and communtarian groups like shakers and quakers. 
 
+"> **Objects selected by a 19th-century social reformer trying to create dignified collective life.**"
 
+> We are sourcing objects that reflect Northeastern traditions of communal domestic infrastructure — particularly Shaker and Quaker material culture — emphasizing repairability, visible joinery, agricultural material palettes, and storage-first design logics.
+
+| Building element     | Restaurant translation         |
+| -------------------- | ------------------------------ |
+| Brick massing        | Unglazed clay / stoneware      |
+| Iron railings        | Forged servingware + flatware  |
+| Courtyard logic      | Shared vessels                 |
+| Exterior stairs      | Visible joinery                |
+| Limited profit model | Non-luxury materials well made |
+|                      |                                |
+
+more specific details
+- quatrefoils, arches, etc..
 ###### Referneces
 
 Playing off the ironwork details on the building

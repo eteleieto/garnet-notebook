@@ -1,0 +1,2 @@
+
+Not a private community space. Its ground level and porous. space is experimenting with realtional development in ground level infra. starting with dinner… than expanding outward… in charge of experience, research, refinement, etc… but also the art of hospitality and hosting and different facilitators

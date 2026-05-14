@@ -1,4 +1,4 @@
-
+Dignified communal life... much like shakers... much like model of restaurant
 
 Riverside was tenement housing, first public housing in the US. 
 - brickwork on the 4th fl, the 4 leaf clover stamps in the black metal

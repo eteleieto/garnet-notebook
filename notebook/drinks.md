@@ -1,1 +1,0 @@
-"We favour wines produced in vineyards that share our agricultural ideals, eschewing herbicides and pesticides and making living wines with minimal intervention." Le Doyenne 

@@ -9,7 +9,7 @@ Can you introduce a new form
 
 align profits with community... at the level of the storefront, so important
 - [[storefront labs]]
-- [[storefronts as the fundamental unit of the city]]
+- [[Storefronts are the Fundamental Unit of the City]]
 - [[The space as studio]]
 - [[the shopkeeper is the most intelligent person on the block, yet has blunt tools]]
 - [[situated knowledge]]

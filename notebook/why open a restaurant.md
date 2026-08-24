@@ -1,0 +1,8 @@
+- make beauty, and know it
+- know a neighborhood
+- have a studio -> sociological lab
+- restaurants need to be better business -> make the most important storefront more profitabe 
+- get people eating together -> democracy and civics. know thy neighbor, break bread, do things together. do this amongst people who would never share a meal. has to be these people, because dinners at home don't do it. and the home is hard to get diversity into. 
+- be the shopkeeper -> understand what makes up the city, the block, the building. understand the storefront ,the fundamental unit of the city (from an action standpoint)
+- understand the region through craft, farming, etc.. -> know the region
+- cuisine - huge part of identity, belonging, deliciousness. 

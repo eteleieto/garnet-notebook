@@ -19,7 +19,7 @@ its values. its also practical, at shared table...
 
 also, more here, community and such. we think we can opinionated. 
 
-vegans drink less. and they skew younger.so non-alcoholic focused ([[drinks]])
+vegans drink less. and they skew younger.so non-alcoholic focused ([[Beverages]])
 
 they want community more than others... they want to be able to eat the same thing at the table, and not be the annoying ones. 
 

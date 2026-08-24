@@ -6,63 +6,8 @@
       {
         "id": "e0603f24fbf65b08",
         "type": "tabs",
+        "dimension": 20.652173913043477,
         "children": [
-          {
-            "id": "b42dea5acf511538",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Opening Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Opening Welcome"
-            }
-          },
-          {
-            "id": "0dcd688d9636a886",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Notebook Guide.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Notebook Guide"
-            }
-          },
-          {
-            "id": "d96bc25ac8937562",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TO DO.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TO DO"
-            }
-          },
-          {
-            "id": "e76ef233465bff3e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "the third thing theory of relationships.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "the third thing theory of relationships"
-            }
-          },
           {
             "id": "9c22d40f3fd75cad",
             "type": "leaf",
@@ -75,48 +20,6 @@
               },
               "icon": "lucide-file",
               "title": "index"
-            }
-          },
-          {
-            "id": "13c7f3d77133b676",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/language and communication.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "language and communication"
-            }
-          },
-          {
-            "id": "a61d067e71ffa466",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "3f70df5fbfbba703",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kids at Garnet.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Kids at Garnet"
             }
           },
           {
@@ -162,62 +65,6 @@
             }
           },
           {
-            "id": "eee1381a728b9ef2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Foraging Log.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Foraging Log"
-            }
-          },
-          {
-            "id": "c1a1e1998962d9e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "On being Profitable.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "On being Profitable"
-            }
-          },
-          {
-            "id": "e032024cce6c6eba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "menu changes every 2 weeks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "menu changes every 2 weeks"
-            }
-          },
-          {
-            "id": "6e89269330033f3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Material Considerations.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Material Considerations"
-            }
-          },
-          {
             "id": "e7f9350c78b5e3c8",
             "type": "leaf",
             "state": {
@@ -232,21 +79,407 @@
             }
           },
           {
-            "id": "5309b1ea749e6059",
+            "id": "17167b703380a6ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/index.md",
+                "file": "R&D Night 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "R&D Night 1"
+            }
+          },
+          {
+            "id": "289c43e3f6f3ba81",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "nothing lasts forever.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "nothing lasts forever"
+            }
+          },
+          {
+            "id": "4671c056d4ca27a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "courses as interruption.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "courses as interruption"
+            }
+          },
+          {
+            "id": "a60f3d0d10a5d273",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unsorted notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "unsorted notes"
+            }
+          },
+          {
+            "id": "43dc84f8c769aecd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Beverages.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Beverages"
+            }
+          },
+          {
+            "id": "ba9157bc66159bcf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Commensalism.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Commensalism"
+            }
+          },
+          {
+            "id": "c6c5a59933f0691c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "R&D Night 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "R&D Night 1"
+            }
+          },
+          {
+            "id": "ecbae4947b57b115",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Navigation is a defining feature of the domestic.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Navigation is a defining feature of the domestic"
+            }
+          },
+          {
+            "id": "30f167cb902b7d8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "why open a restaurant.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "why open a restaurant"
+            }
+          },
+          {
+            "id": "6b669c89de121c07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Neighbors.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Neighbors"
+            }
+          },
+          {
+            "id": "8e2c3cfbd384b9a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Monastic Eating.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Monastic Eating"
+            }
+          },
+          {
+            "id": "15865a942e591fd5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chairs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chairs"
+            }
+          },
+          {
+            "id": "302e9f0c2c4e838b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unsorted notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "unsorted notes"
+            }
+          },
+          {
+            "id": "14bfcf8bc20758be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Beverages.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Beverages"
+            }
+          },
+          {
+            "id": "6aaccd2c104ee2fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Economics of the Chair.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "The Economics of the Chair"
+            }
+          },
+          {
+            "id": "11e6b69f98adffe3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "the building.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "the building"
+            }
+          },
+          {
+            "id": "97ba1169eebcbf45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Social Forms.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Social Forms"
+            }
+          },
+          {
+            "id": "f505ed86daf99305",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Storefronts create a field of action.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Storefronts create a field of action"
+            }
+          },
+          {
+            "id": "f91e4edd3860442d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "On our Pricing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "On our Pricing"
+            }
+          },
+          {
+            "id": "6b27eda29a92a515",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Garnet's Notebook.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Garnet's Notebook"
             }
           }
         ],
-        "currentTab": 16
+        "currentTab": 5
+      },
+      {
+        "id": "03b645b3274dace3",
+        "type": "tabs",
+        "dimension": 79.34782608695652,
+        "children": [
+          {
+            "id": "c1a1e1998962d9e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notebook Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Notebook Guide"
+            }
+          },
+          {
+            "id": "af22d8979772ecf9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Social Forms.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Social Forms"
+            }
+          },
+          {
+            "id": "be23f7ffe8463b90",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Non Alcoholic Beverages.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Non Alcoholic Beverages"
+            }
+          },
+          {
+            "id": "2f068188d1b21d16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Non Alcoholic Beverages.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Non Alcoholic Beverages"
+            }
+          },
+          {
+            "id": "d82f830f74de84b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Field Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Field Notes"
+            }
+          },
+          {
+            "id": "8f32f65092ba167a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "storefront labs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "storefront labs"
+            }
+          },
+          {
+            "id": "630c5848b48abd34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Storefronts are the Fundamental Unit of the City.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Storefronts are the Fundamental Unit of the City"
+            }
+          },
+          {
+            "id": "51489e9191fcfe06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Restaurant References.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Restaurant References"
+            }
+          }
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -266,7 +499,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -303,7 +538,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "f5403921a42b1dcb",
@@ -319,7 +554,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TO DO.md",
+                "file": "R&D Night 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -329,7 +564,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for TO DO"
+              "title": "Backlinks"
             }
           },
           {
@@ -381,13 +616,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TO DO.md",
+                "file": "Notebook Guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of TO DO"
+              "title": "Outline of Notebook Guide"
             }
           }
         ]
@@ -408,34 +643,39 @@
       "bases:Create new base": false
     }
   },
-  "active": "1197205830d1909f",
+  "active": "17167b703380a6ca",
   "lastOpenFiles": [
-    "garnet-notebook",
-    "Chairs.md",
-    "dishwashing.md",
-    "Material Considerations.md",
-    "menu changes every 2 weeks.md",
-    "Template/menu.md",
-    "Foraging Log.md",
-    "On being Profitable.md",
-    "TO DO.md",
-    "the third thing theory of relationships.md",
-    "Kids at Garnet.md",
-    "Lunch at Garnet.md",
-    "Returning Customers.md",
-    "Events.md",
-    "language and communication.md",
-    "content/index.md",
-    "maximize unplanned repeat interactions.md",
-    "Untitled.md",
-    "Notebook Guide.md",
-    "storefronts as the fundamental unit of the city.md",
-    "No file.md",
+    "website.md",
+    "R&D Night 1.md",
+    "Regional Food Culture.md",
+    "Social Forms.md",
+    "content/You Should Become the Shopkeeper.md",
+    "Untitled 3.md",
+    "Field Notes.md",
     "social form.md",
-    "Screenshot 2026-04-16 at 12.36.48 PM.png",
-    "too much or too little context on menus.md",
+    "Storefronts are the Fundamental Unit of the City.md",
+    "content/index.md",
+    "storefronts define the neighborhood.md",
+    "storefront labs.md",
+    "Restaurant References.md",
+    "Notebook Guide.md",
+    "Non Alcoholic Beverages.md",
+    "Jane Jacobs.md",
+    "Beverages.md",
+    "Storefronts create a field of action.md",
+    "Garnet's Notebook.md",
+    "Neighbors.md",
     "Opening Welcome.md",
-    "Observations.md",
-    "private vs public social infrastructure.md"
+    "our thanks.md",
+    "Our Philosophy.md",
+    "The space as studio.md",
+    "TO DO.md",
+    "why open a restaurant.md",
+    "Screenshot 2025-10-22 at 11.10.46 PM.png",
+    "Screenshot 2025-05-05 at 3.42.42 PM.png",
+    "Screenshot 2026-06-28 at 11.18.50 AM.png",
+    "Screenshot 2026-06-09 at 11.57.06 PM.png",
+    "garnet-notebook",
+    "Screenshot 2026-04-16 at 12.36.48 PM.png"
   ]
 }

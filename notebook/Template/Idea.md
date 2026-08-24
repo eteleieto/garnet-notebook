@@ -2,7 +2,9 @@
 tags:
   - seed
 date:
-List:
+Author:
+About:
+Scale:
 ---
 #### Housekeeping
 1. Add ==Status== #seed, #sapling, or #fruit 

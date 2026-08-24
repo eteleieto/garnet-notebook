@@ -1,3 +1,42 @@
+Listening to [[Claude Fischler]] and [[Marion Nestle]]
+- Commensalism is the central time in which norms and behaviors are set, practiced, and habituated. 
+- Do you act in deference to authority or age? Do you negotiate portions or offer the last piece? Do you ask or wait?
+- Commensalism as a plant-based person – almost never sharing in the food of the group.
+- The French take the Americans to be animals – eating by ourselves, eating while we walk.
+- Much can happen at the table at the same time. Two people may be engaged in debate. Another one investigating their food. And three listening to a story of the fourth. The table is the setting of relational development, with people, food, etc... 
+
+if you want to rewrite the norms of the city, get people eating together. 
+
+Commensalism at the mtn school
+- not always the same group, but roughly the same 100. 
+- eating together established the civic organism of campus. 
+
+commensalism as family
+- the reason we gather; for there is a meal. 
+
+Commensalism amongst strangers 
+
+It is not a matter of theatre vs no theatre, but performance vs. ritual. Theatre is restaurant to guest. Ritual is guest to one another. 
+- much like the ritual of prayer at beginning of meal. those who know it, know it, and the rest follow along. 
+- the strongest norms are learned socially, not announced. norms get built over many dinners. late arrivals get told by those at the table.
+	- ==How to handle if sitting mtn school style??==
+
+
+Commercial commensality
+- most research is on families, workplace, schools, etc.. 
+- pop-ups and supper clubs listed
+	- new kind of pop-up third space
+	- requires a body of practices
+
+stranger commensality
+- inhibit or monitor self to see how look
+
+commensality -> democracy
+- 
+
+---
+we perform relatiomships, and then those become them, and they become us. so we should probably know the most signficant site of relationship s
+
 what separates us from other animals, in archeoligcal data, is that we ate together, with non consanginoues kin, collanorated, shared food.
 
 

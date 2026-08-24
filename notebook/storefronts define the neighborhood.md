@@ -1,0 +1,1 @@
+They define a neighborhood (so ones sense of place/belonging is constiturwed by them), they help you meet neighbors, they are the gathering place for locals, etc.. The way we develop local civics is thorugh the development of these spaces and institutions and forms that support certain kind of relational development.

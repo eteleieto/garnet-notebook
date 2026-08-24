@@ -1,4 +1,20 @@
 
+
+to do
+- chat gpt help
+- stpeh ango site
+- reddit
+- community plugins?
+- set up quick capture for myself and hires
+- setup publish: false, publish: true
+- add a "ask a question, contribute a thought for any page"
+
+notes
+- internal for team tag
+- public tag
+
+
+
 #### Tag Ontology
 - #events
 - topic (e.g. architecture, community, etc..)
@@ -10,12 +26,18 @@
 ### Templates
 ==are these tags too?==
 [[Idea]]
+Operations
 Pattern or Method
+Experiment
 [[Essay]]/Article
 [[menu]]
-Larder Item
 [[Gathering]]
 
+within templates
+- author of note
+- auto date creation
+- tags
+- 
 
 # Notes To Digest
 - views list as bases... if you want to see all notes on community... 

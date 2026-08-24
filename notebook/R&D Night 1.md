@@ -1,0 +1,2 @@
+cycnicism with respect to neighbors. can pass person 100 times and say nothing. have one meal, and you will say a lot. 
+- what do we make of these kind of relations within the broader stack of relations?

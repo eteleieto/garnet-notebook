@@ -19,7 +19,7 @@
 12. Look into obsidian structures
 	1. Kepano, Jacky, etc..
 	2. look at other sites - like stuart, etc.. to see documentation methods
-13. - notes from pattern language and social forms, as to why we're working on the [[No file]]
+13. - notes from pattern language and social forms, as to why we're working on the [[Garnet's Notebook]]
 	- different facilitators, open source knowledge and tools, open source them for restaurants but also to generate new typologies of the storefront. we want patterns of behavior which make us more alive, more cozy, more cared for, more ambitious. these patterns are made up of norms, space, incentives, etc.. and we may study these patterns... 
 - What is the northeast?
 	- northeastern food culture, developing regional cuisine, and map of area... across all food and craft and knowing an area

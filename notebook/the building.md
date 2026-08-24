@@ -14,7 +14,7 @@ Riverside was tenement housing, first public housing in the US.
 - prompted by religious duty and passion, to do social service project
 
 history
-- 1762, Phillip Livingston, a signer of the Declration, bought from the Remsen Estate and had a molasses distlerry here. 
+- 1762, Phillip Livingston, a signer of the Declaration, bought from the Remsen Estate and had a molasses distlerry here. 
 - taken during revolutionry war to make spruce beer for thw wounded
 - 1802 Hezekiah Pierrepont buys, and make anchor gin distillery, also a cow barn 
 - then candle facotry by 1820s

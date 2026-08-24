@@ -127,7 +127,7 @@ a {
   --bodyFont: "Source Serif 4", Georgia, serif;
   --headerFont: "Amarna", "PP Editorial Sans", sans-serif;
   --uiFont: "PP Editorial Sans", Georgia, "Times New Roman", sans-serif;
-  --titleFont: "Recovered", "Franklin Caslon", serif;
+  --garnetTitleFont: "Recovered", "Franklin Caslon", serif;
 }
 
 body {
@@ -212,7 +212,7 @@ article h6,
 }
 
 .article-title {
-  font-family: var(--titleFont) !important;
+  font-family: var(--garnetTitleFont) !important;
   font-style: italic;
   font-weight: 400 !important;
   font-size: clamp(1.3rem, 1.8vw, 1.9rem);
@@ -635,7 +635,7 @@ header {
     top: 50%;
     left: 68%;
     transform: translate(-50%, -50%);
-    font-family: var(--titleFont);
+    font-family: var(--garnetTitleFont);
     font-style: italic;
     font-weight: 400;
     font-size: clamp(3rem, 9vw, 6.5rem);

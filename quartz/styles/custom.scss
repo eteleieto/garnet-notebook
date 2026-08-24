@@ -113,11 +113,21 @@ a {
 }
 
 
+/* Recovered Font - the Garnet display/title face (italic-only, matches garnet.nyc) */
+@font-face {
+  font-family: "Recovered";
+  src: url("/static/fonts/RecoveredFont-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 // Custom font styling to match garnet-site
 :root {
   --bodyFont: "Source Serif 4", Georgia, serif;
   --headerFont: "Amarna", "PP Editorial Sans", sans-serif;
   --uiFont: "PP Editorial Sans", Georgia, "Times New Roman", sans-serif;
+  --titleFont: "Recovered", "Franklin Caslon", serif;
 }
 
 body {
@@ -202,8 +212,8 @@ article h6,
 }
 
 .article-title {
-  font-family: "Franklin Caslon", serif !important;
-  font-style: normal;
+  font-family: var(--titleFont) !important;
+  font-style: italic;
   font-weight: 400 !important;
   font-size: clamp(1.3rem, 1.8vw, 1.9rem);
   line-height: 1.15;
@@ -241,10 +251,11 @@ thead {
   letter-spacing: 0.08em;
 }
 
-// Strong/bold text - use ultrabold (800) for contrast with ultralight body
+// Strong/bold text - a moderate weight reads as emphasis against the
+// ultralight body without the heavy slab of ultrabold
 strong,
 b {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 // Italic text
@@ -400,6 +411,12 @@ i {
       }
     }
   }
+}
+
+// Footnotes - drop the back-reference arrow glyph, which renders as an emoji
+.footnotes a[data-footnote-backref],
+.footnotes a.data-footnote-backref {
+  display: none !important;
 }
 
 // Blockquotes - elegant styling to match garnet-site aesthetic
@@ -618,7 +635,7 @@ header {
     top: 50%;
     left: 68%;
     transform: translate(-50%, -50%);
-    font-family: "Franklin Caslon", serif;
+    font-family: var(--titleFont);
     font-style: italic;
     font-weight: 400;
     font-size: clamp(3rem, 9vw, 6.5rem);

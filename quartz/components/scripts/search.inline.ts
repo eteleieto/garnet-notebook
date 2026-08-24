@@ -291,11 +291,13 @@ async function setupSearch(
         if (active.classList.contains("no-match")) return
         await displayPreview(active)
         active.click()
+        hideSearch()
       } else {
         const anchor = document.getElementsByClassName("result-card")[0] as HTMLInputElement | null
         if (!anchor || anchor.classList.contains("no-match")) return
         await displayPreview(anchor)
         anchor.click()
+        hideSearch()
       }
     } else if (e.key === "ArrowUp" || (e.shiftKey && e.key === "Tab")) {
       e.preventDefault()

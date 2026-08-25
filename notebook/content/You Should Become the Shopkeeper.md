@@ -6,7 +6,7 @@ Author: "[[Benjamin Laufer]]"
 ---
 When you walk down the street, within your visual field are two primary kinds of building frontage: homes and businesses. On this street, all the residences within view are inaccessible. You cannot, reasonably, enter them. You can see the apartment, but it affords you no action. 
 
-And then there are storefronts. Their doors are left unlocked. The storefronts are porous; in the city, they make up our collective field of action [^1].
+And then there are storefronts. Their doors are left unlocked. The storefronts are porous; in the city, they make up our collective field of action.
 
 Activity takes place elsewhere in the city of course, but only after you have a particular role or relation. 
 
@@ -158,8 +158,6 @@ Shopkeepers are operators, institution builders, researchers, social architects,
 If you are ambitious and wish to be enmeshed in your neighborhood, work at the scale of a street and contribute to forms that when scaled shape a nation.  
 
 ---
-
-[^1]: [[Storefronts are the Fundamental Unit of the City]]
 
 [^2]: [Cities and Ambition](https://www.paulgraham.com/cities.html) by Paul Graham
 

@@ -28,7 +28,7 @@ And because that commonality is geographic, the effects of the encounter extend 
 
 We stay longer in place where we know others and are known ourselves. When we intend to stay longer, we invest more in the place around us. When we notice something is wrong in the commons, we are more likely to address it. The roots of our belonging, and our civics, is our relationships. 
 
-The structure through which the storefront produces these relationships is the [[social forms|social form]].
+The structure through which the storefront produces these relationships is the [[Social Forms|social form]].
 
 ---
 ## Social Forms
@@ -161,7 +161,7 @@ If you are ambitious and wish to be enmeshed in your neighborhood, work at the s
 
 [^2]: [Cities and Ambition](https://www.paulgraham.com/cities.html) by Paul Graham
 
-[^6]: [Dining Out: A Global History of Restaurants](https://www.amazon.com/Dining-Out-Global-History-Restaurants/dp/1789140579)
+[^6]: [Dining Out: A Global History of Restaurants](https://www.amazon.com/Dining-Out-Global-History-Restaurants/dp/1789140579) by Katie Rawson and Elliott Shore
 
 [^11]: [Street-level Architecture and the Street-level Economy](https://www.conradkickert.com/urban-evolution-copy) by Conrad Kickert
 

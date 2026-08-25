@@ -757,7 +757,10 @@ header {
     font-family: var(--garnetTitleFont);
     font-style: italic;
     font-weight: 400;
-    font-size: clamp(3rem, 9vw, 6.5rem);
+    // Capped so the wordmark stays tucked behind the note once one is open -
+    // the gap beside a two-pane stack is narrow, and a larger cap lets the tail
+    // clear the note's right edge on wide viewports.
+    font-size: clamp(2.5rem, 7vw, 4.75rem);
     line-height: 1;
     letter-spacing: 0.05em;
     color: transparent;

@@ -286,17 +286,23 @@ async function setupSearch(
     if (!container.classList.contains("active")) return
     if (e.key === "Enter" && !e.isComposing) {
       // If result has focus, navigate to that one, otherwise pick first result
+      // Enter always dismisses the search bar. Navigate first when there is a
+      // real result to open; the "no results" card is not navigable, but the
+      // bar should still close.
       if (results.contains(document.activeElement)) {
         const active = document.activeElement as HTMLInputElement
-        if (active.classList.contains("no-match")) return
-        await displayPreview(active)
-        active.click()
+        if (!active.classList.contains("no-match")) {
+          await displayPreview(active)
+          active.click()
+        }
       } else {
         const anchor = document.getElementsByClassName("result-card")[0] as HTMLInputElement | null
-        if (!anchor || anchor.classList.contains("no-match")) return
-        await displayPreview(anchor)
-        anchor.click()
+        if (anchor && !anchor.classList.contains("no-match")) {
+          await displayPreview(anchor)
+          anchor.click()
+        }
       }
+      hideSearch()
     } else if (e.key === "ArrowUp" || (e.shiftKey && e.key === "Tab")) {
       e.preventDefault()
       if (results.contains(document.activeElement)) {

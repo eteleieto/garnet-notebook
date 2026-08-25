@@ -43,18 +43,18 @@ Much of our life takes place within forms we rarely notice as forms: restaurants
 
 These forms structure the majority of our lives.
 
-I am especially interested in the subset that occupy urban ground-floor commercial spaces. They are unusually visible, porous, and replicable. They address a whole neighborhood, not a pre-selected and later insular group [^4].
+I am especially interested in the subset that occupy urban ground-floor commercial spaces. They are unusually visible, porous, and replicable. They address a whole neighborhood, not a pre-selected and later insular group.
 
 ---
 ## Invented Forms
 
-Yet, we mistakenly take these forms to be fixed categories of the built environment. Instead, they are inventions. Each emerged under unique spatial, cultural, and historical conditions, and then became legible, templatized, and fixed in the urban imagination [^5].
+Yet, we mistakenly take these forms to be fixed categories of the built environment. Instead, they are inventions. Each emerged under unique spatial, cultural, and historical conditions, and then became legible, templatized, and fixed in the urban imagination.
 
 It's easy to confuse familiar forms as inevitable forms. The modern restaurant is only a few centuries old, emerging in the 18th century in Paris [^6]. Other variations, like the fast-casual slopbowl, have emerged much more recently. 
 
 Walk into any storefront where you live, and you probably have an astonishingly detailed model of how you should exist within it.  
 
-Travel to another country, or even another city, and you enter locally specific forms that asks you to behave in unfamiliar ways. You have no model for the form. Soon, you learn the rules, expected conduct and norms; you become a person who acts a certain way [^7].
+Travel to another country, or even another city, and you enter locally specific forms that asks you to behave in unfamiliar ways. You have no model for the form. Soon, you learn the rules, expected conduct and norms; you become a person who acts a certain way.
 
 Forms make particular patterns of behavior ordinary. Repeated across our lives, across many people, these patterns arrange and define society itself. 
 
@@ -84,7 +84,7 @@ The aim is not to scale that particular storefront.
 
 Instead, the aim is to make legible the abstracted form – the social form, economic form, and operating form – so that it may then be remixed by operators to fit their personhood, their street and their community. 
 
-This a theory of distributed change, rather than centralized expansion. It scales through the bottom-up work of future shopkeepers. It avoids central top-down planning, as is too common in new urban developments, and brings something to the people [^8]. 
+This a theory of distributed change, rather than centralized expansion. It scales through the bottom-up work of future shopkeepers. It avoids central top-down planning, as is too common in new urban developments, and brings something to the people. 
 
 And it what's happened to most of the forms we have now. They started as one establishment doing something different. They were copied and modified, and eventually entered the library of forms that future shopkeepers selected from. 
 
@@ -130,7 +130,7 @@ If work organizes less of life, I think we can anticipate that where we live wil
 
 Instead of our time being organized by the employer, it will fall on us. New, and old, social forms will have to take on more of the burden of civilizational health, including that which work provided for us.
 
-Simultaneously, we're eliminating the economic inefficiencies of human interaction in the city: autonomous vehicles, self-checkout, order kiosks, and so on. Historically, urban interaction was often incidental. The frictions of commerce have us interacting with the cashier, and the frictions of navigation had us asking for directional help [^10].
+Simultaneously, we're eliminating the economic inefficiencies of human interaction in the city: autonomous vehicles, self-checkout, order kiosks, and so on. Historically, urban interaction was often incidental. The frictions of commerce have us interacting with the cashier, and the frictions of navigation had us asking for directional help.
 
 As those incidental encounters disappear, the forms that remain will increasingly need explicit social design.
 

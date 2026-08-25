@@ -535,7 +535,7 @@
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -610,7 +610,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/index.md",
+                "file": "content/You Should Become the Shopkeeper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -699,10 +699,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "6a1fac1af533c59d",
+  "active": "c5d81efb8f8dfe2d",
   "lastOpenFiles": [
-    "Garnet's Notebook.md",
     "content/index.md",
+    "Garnet's Notebook.md",
     "content/Social Forms.md",
     "content/You Should Become the Shopkeeper.md",
     "Relationships are plagued by their beginnings.md",

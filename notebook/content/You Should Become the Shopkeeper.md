@@ -24,9 +24,9 @@ Cities share their own messages [^2]. So do neighborhoods. But, at the scale of 
 
 This is part of what makes the storefront such an unusual social technology: it combines openness with structure. It can organize encounters among people whose primary thing in common may simply be that they live in the same area. 
 
-And because that commonality is geographic, the effects of the encounter extend beyond the storefront. You may have passed someone a hundred times without so much as a hello, but after a one interaction, every future passby holds the possibility and significance of recognition,
+And because that commonality is geographic, the effects of the encounter extend beyond the storefront. You may have passed someone a hundred times without so much as a hello, but after a one interaction, every future pass-by holds the possibility and significance of recognition.
 
-We stay longer in place where we know others and are known ourselves. When we intend to stay longer, we invest more in the place around us. When we notice something is wrong in the commons, we are more likely to address it. The roots of our belonging, and our civics, is our relationships. 
+We stay longer in place where we know others and are known ourselves. When we intend to stay longer, we invest more in the place around us. When we notice something is wrong in the commons, we are more likely to address it. The roots of our belonging, and our civics, is in our relationships. 
 
 The structure through which the storefront produces these relationships is the [[Social Forms|social form]].
 

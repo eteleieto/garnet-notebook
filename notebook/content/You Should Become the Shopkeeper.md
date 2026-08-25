@@ -33,11 +33,11 @@ The structure through which the storefront produces these relationships is the [
 ---
 ## Social Forms
 
-Toby Shorin's piece [Theory of Social Forms](https://writing.tobyshorin.com/theory-of-social-forms/) and [Prototyping Social Forms of Care](https://writing.tobyshorin.com/prototyping-social-forms-of-care/) introduced the language of social forms to me, and I think its useful frame. 
+Toby Shorin's pieces [Theory of Social Forms](https://writing.tobyshorin.com/theory-of-social-forms/) and [Prototyping Social Forms of Care](https://writing.tobyshorin.com/prototyping-social-forms-of-care/) introduced the language of social forms to me, and I think its useful frame. 
 
 Shorin describes them as “the structured architectures of behavior that determine the shape of social situations,” or as “the templates of social life.”
 
-They are the arrangements of people, roles, activity, place, and time that give a social situation its shape.
+They are the arrangements of people, roles, an activity, a place, and a time that give a social situation its shape.
 
 Much of our life takes place within forms we rarely notice as forms: restaurants, classrooms, dinner parties, meetings, religious service, and so on. 
 
@@ -155,7 +155,7 @@ You don't need a master city plan to change urban life.
 
 Shopkeepers are operators, institution builders, researchers, social architects, and civic leaders working at the smallest scale at which urban life can be repeatedly rearranged and reworked.
 
-If you are ambitious and wish to be enmeshed in your neighborhood, work at the scale of a street and contribute to forms that when scaled shape a nation.  
+If you are ambitious, wish to be involved in your neighborhood, work at the scale of the street and contribute to forms that when scaled shape a nation.  
 
 ---
 

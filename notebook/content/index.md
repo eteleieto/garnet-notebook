@@ -6,7 +6,6 @@ Welcome to the notebook of [Garnet](https://www.garnet.nyc/), a restaurant openi
 
 More coming soon.
 
-**Recent Writing:**
-1. [[You Should Become the Shopkeeper]]
+**Recent Writing:** [[You Should Become the Shopkeeper]]
 
 ben [at] garnet [dot] nyc

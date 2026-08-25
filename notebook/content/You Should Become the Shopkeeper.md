@@ -14,7 +14,7 @@ In the office, you are to be an employee.
 
 In the school, you are to be a student. 
 
-In the home, you are a friend of the inhabitant. 
+In the home, you are a friend of the resident. 
 
 It's not only about access. A park is also at ground level and open to all. So is a street. But these spaces, by design, leave your activity somewhat undetermined. 
 
@@ -31,7 +31,7 @@ We stay longer in place where we know others and are known ourselves. When we in
 The structure through which the storefront produces these relationships is the [[social forms|social form]].
 
 ---
-#### Social Forms
+## Social Forms
 
 Toby Shorin's piece [Theory of Social Forms](https://writing.tobyshorin.com/theory-of-social-forms/) and [Prototyping Social Forms of Care](https://writing.tobyshorin.com/prototyping-social-forms-of-care/) introduced the language of social forms to me, and I think its useful frame. 
 
@@ -46,7 +46,7 @@ These forms structure the majority of our lives.
 I am especially interested in the subset that occupy urban ground-floor commercial spaces. They are unusually visible, porous, and replicable. They address a whole neighborhood, not a pre-selected and later insular group [^4].
 
 ---
-#### Invented Forms
+## Invented Forms
 
 Yet, we mistakenly take these forms to be fixed categories of the built environment. Instead, they are inventions. Each emerged under unique spatial, cultural, and historical conditions, and then became legible, templatized, and fixed in the urban imagination [^5].
 
@@ -59,7 +59,7 @@ Travel to another country, or even another city, and you enter locally specific 
 Forms make particular patterns of behavior ordinary. Repeated across our lives, across many people, these patterns arrange and define society itself. 
 
 ---
-**Social Forms are Economic Forms**
+## Social Forms are Economic Forms
 
 Yet, a social form can only exist and proliferate if an economic form sustains it. The social possibilities of a storefront are bounded, and defined, by how it makes money.
 
@@ -74,7 +74,7 @@ Economic forms are social forms, and vice versa.
 An experiment in social form without a functioning economic form will be short-lived. The best forms find alignment beyond reconciliation: economic and social activity productively reinforce one another. 
 
 ---
-#### Scale
+## Scale
 
 If economic viability is what allows it to exist, legibility is what allows it to scale. 
 
@@ -97,7 +97,7 @@ So invention alone is insufficient. A new form must be demonstrated, abstracted 
 At maturity, no one person or company upholds the form. They are simply drawn on, and moved through, like language itself [^12].
 
 ---
-#### New Forms
+## New Forms
 
 So, where are the new forms?
 
@@ -110,7 +110,7 @@ Clearly, people want something more. The renewed interest in the "third place"  
 If the presiding forms aren't creating patterns of urban activity that contribute to human flourishing, we have to invent new ones.
 
 ---
-#### The Moment
+## The Moment
 
 This seems to me particularly good (and important) time to take seriously this work. 
 
@@ -145,7 +145,7 @@ We can even imagine post-transactional or post-retail storefronts: places whose 
 In all versions of the future, the ground-level becomes much more important, not less. 
 
 ---
-#### Become the Shopkeeper
+## Become the Shopkeeper
 
 So here is my invitation: become the shopkeeper. 
 
@@ -161,17 +161,7 @@ If you are ambitious and wish to be enmeshed in your neighborhood, work at the s
 
 [^2]: [Cities and Ambition](https://www.paulgraham.com/cities.html) by Paul Graham
 
-[^4]: [[Against Curation]]
-
-[^5]: [[Social Forms are Inventions]]
-
 [^6]: [Dining Out: A Global History of Restaurants](https://www.amazon.com/Dining-Out-Global-History-Restaurants/dp/1789140579)
-
-[^7]: [[Becoming Skilled in a Social Form]]
-
-[^8]: [[A Theory of Scaling Forms]]
-
-[^10]: The Inefficiency of Human Interaction
 
 [^11]: [Street-level Architecture and the Street-level Economy](https://www.conradkickert.com/urban-evolution-copy) by Conrad Kickert
 

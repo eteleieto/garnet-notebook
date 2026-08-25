@@ -56,7 +56,7 @@ Some restaurants may get two seatings at the table of four, but the first seatin
 ---
 ### The Economics of the Chair
 
-You may think that a restaurant's perishable inventory is its food. It is not. It's the chairs, or more precisely, time in the chairs. If a seat is not occupied for an hour, that **seat-hour** – the only truly important part of restaurant's inventory - perishes. That empty seat cannot be stored and sold tomorrow. 
+You may think that a restaurant's perishable inventory is its food. It is not. It's the chairs, or more precisely, time in the chairs. If a seat is not occupied for an hour, that seat-hour – the only truly important part of restaurant's inventory - perishes. That empty seat cannot be stored and sold tomorrow. 
 
 The restaurant's seat-hours are the basic unit of its inventory.  
 
@@ -73,7 +73,7 @@ On a given night, that table of 4 may look like the following
 
 By the end of the evening, that table sold 14 of its available 20 seat-hours, or a 70% utilization. 
 
-This is a crude view of a restaurant's economics, but it's a very useful one. It demonstrates how the primary levers have to do with the chair: how many, their utilization at a table, how consistently they are replaced, and so on. 
+This is a crude view of a restaurant's economics, but it's a very useful one. It demonstrates how the primary levers have to do with the chair: how many, their utilization, how consistently they are replaced, and so on. 
 
 There are, of course, other levers. A restaurant can increase its check average or get a table out in 90 minutes instead of 120 minutes. But, these all exist within the seat-hour view of the restaurant. 
 

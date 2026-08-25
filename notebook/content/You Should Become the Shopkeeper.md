@@ -6,7 +6,7 @@ Author: "[[Benjamin Laufer]]"
 ---
 When you walk down the street, within your visual field are two primary kinds of building frontage: homes and businesses. On this street, all the residences within view are inaccessible. You cannot, reasonably, enter them. You can see the apartment, but it affords you no action. 
 
-And then there are storefronts. Their doors are left unlocked. The storefronts are porous; in the city, they make up our collective field of action. [^1]
+And then there are storefronts. Their doors are left unlocked. The storefronts are porous; in the city, they make up our collective field of action [^1].
 
 Activity takes place elsewhere in the city of course, but only after you have a particular role or relation. 
 
@@ -14,13 +14,13 @@ In the office, you are to be an employee.
 
 In the school, you are to be a student. 
 
-in the home, you are a friend of the inhabitant. 
+In the home, you are a friend of the inhabitant. 
 
 It's not only about access. A park is also at ground level and open to all. So is a street. But these spaces, by design, leave your activity somewhat undetermined. 
 
 A storefront asks something of you. It structures action, establishes expected behavior and, historically at least, requires interaction. Walking down the street, it is the storefronts that whisper to you about the possible life you could live. Its potential public is the neighborhood, not a curated group.
 
-Cities share their own messages[^2]. So do neighborhoods. But, at the scale of streets – arguably, the most important unit of analysis for the city – storefronts exert the strongest influence on how life plays out. 
+Cities share their own messages [^2]. So do neighborhoods. But, at the scale of streets – arguably, the most important unit of analysis for the city – storefronts exert the strongest influence on how life plays out. 
 
 This is part of what makes the storefront such an unusual social technology: it combines openness with structure. It can organize encounters among people whose primary thing in common may simply be that they live in the same area. 
 
@@ -31,7 +31,8 @@ We stay longer in place where we know others and are known ourselves. When we in
 The structure through which the storefront produces these relationships is the [[social forms|social form]].
 
 ---
-**Social Forms**
+#### Social Forms
+
 Toby Shorin's piece [Theory of Social Forms](https://writing.tobyshorin.com/theory-of-social-forms/) and [Prototyping Social Forms of Care](https://writing.tobyshorin.com/prototyping-social-forms-of-care/) introduced the language of social forms to me, and I think its useful frame. 
 
 Shorin describes them as “the structured architectures of behavior that determine the shape of social situations,” or as “the templates of social life.”
@@ -42,10 +43,11 @@ Much of our life takes place within forms we rarely notice as forms: restaurants
 
 These forms structure the majority of our lives.
 
-I am especially interested in the subset that occupy urban ground-floor commercial spaces. They are unusually visible, porous, and replicable. They address a whole neighborhood, not a pre-selected and later insular group [^4]
+I am especially interested in the subset that occupy urban ground-floor commercial spaces. They are unusually visible, porous, and replicable. They address a whole neighborhood, not a pre-selected and later insular group [^4].
 
 ---
-**Invented Forms**
+#### Invented Forms
+
 Yet, we mistakenly take these forms to be fixed categories of the built environment. Instead, they are inventions. Each emerged under unique spatial, cultural, and historical conditions, and then became legible, templatized, and fixed in the urban imagination [^5].
 
 It's easy to confuse familiar forms as inevitable forms. The modern restaurant is only a few centuries old, emerging in the 18th century in Paris [^6]. Other variations, like the fast-casual slopbowl, have emerged much more recently. 
@@ -58,6 +60,7 @@ Forms make particular patterns of behavior ordinary. Repeated across our lives, 
 
 ---
 **Social Forms are Economic Forms**
+
 Yet, a social form can only exist and proliferate if an economic form sustains it. The social possibilities of a storefront are bounded, and defined, by how it makes money.
 
 Let's take two quite simple but illustrative examples: the bar and the cafe. 
@@ -71,7 +74,8 @@ Economic forms are social forms, and vice versa.
 An experiment in social form without a functioning economic form will be short-lived. The best forms find alignment beyond reconciliation: economic and social activity productively reinforce one another. 
 
 ---
-**Scale**
+#### Scale
+
 If economic viability is what allows it to exist, legibility is what allows it to scale. 
 
 This invention starts with a single storefront. That storefront establishes new arrangements of space, staffing, ritual, economics, rules of engagement, and the like.
@@ -90,9 +94,11 @@ A new social form begins without any of this. Customers, employees, and operator
 
 So invention alone is insufficient. A new form must be demonstrated, abstracted from the particular establishment that produced it, made legible, remixed and then absorbed into the default conventions of customers, workers, and shopkeepers.
 
-At maturity, no one person or company upholds the form. They are simply drawn on, and moved through, like language itself. 
+At maturity, no one person or company upholds the form. They are simply drawn on, and moved through, like language itself [^12].
 
 ---
+#### New Forms
+
 So, where are the new forms?
 
 Today's forms don't seem to be working that well. The inherited forms appear increasingly mismatched to the lives we want and the economics required to sustain them.
@@ -101,9 +107,11 @@ More, the forms most capable of reproducing under the prevailing storefront econ
 
 Clearly, people want something more. The renewed interest in the "third place"  evidences this want for spaces that address urban isolation, weakened institutions, and the desire to belong. But too often operators engage with the aesthetics of belonging without a new social form: another cafe-ish room, with a language of care, while the underlying rules, economics, and patterns of interaction remain unchanged. I think the “third place” has become the catch-all aspiration precisely because we lack the vocabulary for more differentiated forms.
 
-If the presiding forms aren't creating patterns of urban activity that contribute to human flourishing, **we have to invent new ones**.
+If the presiding forms aren't creating patterns of urban activity that contribute to human flourishing, we have to invent new ones.
 
 ---
+#### The Moment
+
 This seems to me particularly good (and important) time to take seriously this work. 
 
 First, AI and rapid technological change will be destabilizing. This is true in both the optimistic and pessimistic account of things. 
@@ -132,11 +140,13 @@ The neighborhood is where we develop this shared reality.
 
 If our cities don't draw the individual into a rich and meaningful social life, abundant leisure time may be captured by solitary entertainment. The ground-level, and the institutions which make it up, will have to support the activities of the commons: eating together, learning together, building together, worshipping together, or simply being in the presence of others. 
 
-We can even imagine post-transactional or post-retail storefronts: places whose primary purpose is no longer commerce, but instead sociality or something else [^11]
+We can even imagine post-transactional or post-retail storefronts: places whose primary purpose is no longer commerce, but instead sociality or something else [^11].
 
 In all versions of the future, the ground-level becomes much more important, not less. 
 
 ---
+#### Become the Shopkeeper
+
 So here is my invitation: become the shopkeeper. 
 
 Start one, fund one, or build tools for one. 
@@ -148,13 +158,10 @@ Shopkeepers are operators, institution builders, researchers, social architects,
 If you are ambitious and wish to be enmeshed in your neighborhood, work at the scale of a street and contribute to forms that when scaled shape a nation.  
 
 ---
-**Footnotes**
 
 [^1]: [[Storefronts are the Fundamental Unit of the City]]
 
 [^2]: [Cities and Ambition](https://www.paulgraham.com/cities.html) by Paul Graham
-
-[^3]: The ultimate success of a new form may be that its origin becomes irrelevant. It doesn't belong to the person or storefront that invented it. It has becomes part of the language of city-making.
 
 [^4]: [[Against Curation]]
 
@@ -169,3 +176,5 @@ If you are ambitious and wish to be enmeshed in your neighborhood, work at the s
 [^10]: The Inefficiency of Human Interaction
 
 [^11]: [Street-level Architecture and the Street-level Economy](https://www.conradkickert.com/urban-evolution-copy) by Conrad Kickert
+
+[^12]: The ultimate success of a new form may be that its origin becomes irrelevant. It doesn't belong to the person or storefront that invented it. It has becomes part of the language of city-making.

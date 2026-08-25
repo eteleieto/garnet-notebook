@@ -1,11 +1,6 @@
 @use "./base.scss";
 @use "./variables.scss" as *;
 
-/* Keep the custom cursor only for actual links */
-a {
-  cursor: url("/static/quatrefoil-pointer-shadow-24.png") 12 12, pointer;
-}
-
 /* PP Editorial New Font Family */
 @font-face {
   font-family: "PP Editorial New";
@@ -124,18 +119,47 @@ a {
 
 // Custom font styling to match garnet-site
 :root {
-  --bodyFont: "Source Serif 4", Georgia, serif;
-  --headerFont: "Amarna", "PP Editorial Sans", sans-serif;
-  --uiFont: "PP Editorial Sans", Georgia, "Times New Roman", sans-serif;
+  // garnet.nyc's --font-family-body is PP Editorial New and --font-family-navbar
+  // is PP Editorial Sans; both are already loaded locally above.
+  --bodyFont: "PP Editorial New", Georgia, serif;
+  --headerFont: "PP Editorial Sans", sans-serif;
+  --uiFont: "PP Editorial Sans", sans-serif;
+  // Recovered is reserved for the GARNET background watermark only
   --garnetTitleFont: "Recovered", "Franklin Caslon", serif;
+
+  /* ================================
+     TYPE SCALE - mirrors garnet.nyc
+     ================================
+     The site works from four sizes and no h1-h6 ramp: prose at 16/1.7, page
+     titles and nav as 12px uppercase labels, chrome labels at 11px, and 9px
+     for the smallest marginalia. Everything below derives from these. */
+  --fontSize-body: 16px;
+  --fontSize-title: 12px;
+  --fontSize-label: 11px;
+  --fontSize-tiny: 9px;
+  --lineHeight-body: 1.7;
+  // garnet.nyc's --navbar-font-weight. Its editorial-sans registers only 200
+  // and 500, so a 400 target resolves up to Medium - every title, nav item and
+  // label on the site is set in Medium, not Ultralight. Body prose stays at 200.
+  --navbarWeight: 400;
+  --tracking-title: 0.1em; // Tailwind tracking-widest, as used sitewide
+  --tracking-label: 0.08em;
 }
 
 body {
   font-weight: 200;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: var(--fontSize-body);
+  line-height: var(--lineHeight-body);
+  color: var(--darkgray);
+  // garnet.nyc renders ink on paper with a hairline shadow so the type sits
+  // in the texture rather than on top of it
+  text-shadow: 0 0 0.5px rgba(51, 46, 42, 0.3);
+  // The site's <body> carries Tailwind's `antialiased`. Without it the browser
+  // uses subpixel smoothing, which renders the ultralight cut visibly heavier.
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: var(--light);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url("/static/paper.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png");
   background-size: auto, auto;
   background-repeat: repeat, repeat;
   background-attachment: scroll, scroll;
@@ -147,18 +171,21 @@ p,
 li,
 td,
 tbody {
-  line-height: 1.8;
+  line-height: var(--lineHeight-body);
 }
 
-// Links styled like garnet-site: underline instead of background highlight
+// Links styled like garnet-site: same ink as body text, underline instead of a
+// colored highlight; hover fades rather than shifting hue
 a {
   font-weight: 200;
+  color: var(--darkgray);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
   background-color: transparent !important;
 
   &:hover {
+    color: var(--darkgray);
     opacity: 0.7;
     transition: opacity 0.2s ease;
   }
@@ -167,6 +194,7 @@ a {
 // Internal links - remove background highlight, use underline
 a.internal {
   background-color: transparent !important;
+  color: var(--darkgray);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
@@ -181,6 +209,7 @@ a.internal {
 
 // External links
 a.external {
+  color: var(--darkgray);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
@@ -198,55 +227,104 @@ h6 {
   line-height: 1.3;
 }
 
+// garnet.nyc has no h1-h6 ramp at all - it separates levels by case, tracking
+// and family rather than by size. Long-form notes still need levels, so the
+// ramp is compressed to sit just above body size, and the lower levels fall
+// back to the site's uppercase label treatment instead of shrinking further.
+article {
+  h1 {
+    font-size: 1.25rem !important; // 20px
+    letter-spacing: 0.02em;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.125rem !important; // 18px
+    letter-spacing: 0.02em;
+    margin-top: 1.9rem;
+    margin-bottom: 0.85rem;
+  }
+
+  h3 {
+    font-size: var(--fontSize-body) !important; // 16px - reads as a heading via family, not size
+    letter-spacing: 0.03em;
+    margin-top: 1.62rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    font-size: 0.875rem !important; // 14px
+    letter-spacing: 0.04em;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  // The last two levels become the site's small uppercase label
+  h5,
+  h6 {
+    font-size: var(--fontSize-title) !important;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-title);
+    margin-top: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
 // More specific selectors for article headers
 article h1,
 article h2,
 article h3,
 article h4,
 article h5,
-article h6,
-.page-title {
+article h6 {
   font-family: "PP Editorial Sans", sans-serif !important;
   font-weight: 200 !important;
   line-height: 1.3;
 }
 
+.page-title {
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-weight: var(--navbarWeight) !important;
+  line-height: 1.3;
+}
+
 .article-title {
-  font-family: var(--garnetTitleFont) !important;
-  font-style: italic;
-  font-weight: 400 !important;
-  font-size: clamp(1.3rem, 1.8vw, 1.9rem);
+  font-family: "PP Editorial Sans", sans-serif !important;
+  font-style: normal;
+  font-weight: var(--navbarWeight) !important;
+  font-size: var(--fontSize-title);
   line-height: 1.15;
-  text-transform: none;
-  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-title);
 }
 
 .page-title {
   font-family: "PP Editorial Sans", sans-serif !important;
   font-style: normal;
-  font-weight: 200 !important;
-  font-size: 12px !important;
+  font-weight: var(--navbarWeight) !important;
+  font-size: var(--fontSize-title) !important;
   line-height: 1.1;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-title);
 }
 
 // Article content - match garnet-site body styling
 article {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: var(--fontSize-body);
+  line-height: var(--lineHeight-body);
   font-weight: 200;
 
   p,
   li {
-    line-height: 1.8;
+    line-height: var(--lineHeight-body);
   }
 }
 
 // Table headers follow the same restrained sans treatment
 thead {
   font-family: "PP Editorial Sans", sans-serif !important;
-  font-weight: 200 !important;
+  font-weight: var(--navbarWeight) !important;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -267,18 +345,18 @@ i {
 // UI elements use sans font - styled like garnet-site navbar
 .search .search-button {
   font-family: "PP Editorial Sans", sans-serif !important;
-  font-weight: 200 !important;
+  font-weight: var(--navbarWeight) !important;
 
   p {
-    font-weight: 200 !important;
-    font-size: 14px;
+    font-weight: var(--navbarWeight) !important;
+    font-size: var(--fontSize-title);
   }
 }
 
 .search-container .search-space>input {
   font-family: "PP Editorial Sans", sans-serif !important;
   font-weight: 200 !important;
-  font-size: 14px;
+  font-size: var(--fontSize-body);
 
   &::placeholder {
     font-weight: 200 !important;
@@ -288,14 +366,16 @@ i {
 .search-container .result-card {
   h3 {
     font-family: "PP Editorial Sans", sans-serif !important;
-    font-weight: 200 !important;
-    text-transform: none;
-    letter-spacing: normal;
+    font-weight: var(--navbarWeight) !important;
+    font-size: var(--fontSize-title) !important;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-title);
   }
 
   p {
     font-family: var(--bodyFont) !important;
     font-weight: 200 !important;
+    font-size: 0.875rem;
     line-height: 1.6;
   }
 }
@@ -303,10 +383,10 @@ i {
 // Sliding pane spine uses the same understated sans as other notebook chrome
 .sliding-pane-spine {
   font-family: "PP Editorial Sans", sans-serif !important;
-  font-weight: 200 !important;
+  font-weight: var(--navbarWeight) !important;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 11px !important;
+  letter-spacing: var(--tracking-title);
+  font-size: var(--fontSize-label) !important;
 }
 
 // When exactly two notes are open, give the second one a right border (desktop only)
@@ -319,15 +399,15 @@ i {
 // TOC uses sans with garnet-site UI styling
 .toc {
   font-family: "PP Editorial Sans", sans-serif;
-  font-weight: 200;
-  font-size: 14px;
+  font-weight: var(--navbarWeight);
+  font-size: var(--fontSize-title);
 
   .depth-0>a,
   .depth-1>a,
   .depth-2>a,
   .depth-3>a {
     font-family: "PP Editorial Sans", sans-serif;
-    font-weight: 200;
+    font-weight: var(--navbarWeight);
     text-decoration: none;
 
     &:hover {
@@ -341,8 +421,8 @@ i {
 // Explorer uses sans
 .explorer {
   font-family: "PP Editorial Sans", sans-serif;
-  font-weight: 200;
-  font-size: 14px;
+  font-weight: var(--navbarWeight);
+  font-size: var(--fontSize-title);
 
   a {
     text-decoration: none;
@@ -358,10 +438,10 @@ i {
 // Backlinks header uses the same label treatment as site chrome
 .backlinks h3 {
   font-family: "PP Editorial Sans", sans-serif !important;
-  font-weight: 200 !important;
+  font-weight: var(--navbarWeight) !important;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 11px !important;
+  letter-spacing: var(--tracking-title);
+  font-size: var(--fontSize-label) !important;
 }
 
 // Style the page footer (backlinks section) inside panes
@@ -376,10 +456,10 @@ i {
     max-width: 100%;
 
     h3 {
-      font-size: 11px;
+      font-size: var(--fontSize-label);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--gray);
+      letter-spacing: var(--tracking-label);
+      color: rgba(51, 46, 42, 0.55);
       margin-bottom: 0.5rem;
     }
 
@@ -391,9 +471,9 @@ i {
 
       li {
         margin-bottom: 0.25rem;
-        font-size: 14px;
+        font-size: var(--fontSize-title);
         font-family: "PP Editorial Sans", sans-serif;
-        font-weight: 200;
+        font-weight: var(--navbarWeight);
         overflow: clip;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -426,6 +506,7 @@ blockquote {
   padding-left: 1.5rem;
   margin: 1.5rem 0;
   color: var(--darkgray);
+  border-left-color: rgba(51, 46, 42, 0.35);
 
   p {
     margin: 0;
@@ -445,17 +526,17 @@ pre code {
 // Breadcrumbs / navigation elements
 .breadcrumb-container {
   font-family: "PP Editorial Sans", sans-serif;
-  font-weight: 200;
-  font-size: 12px;
+  font-weight: var(--navbarWeight);
+  font-size: var(--fontSize-title);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--tracking-label);
 }
 
 // Tags
 .tags {
   font-family: "PP Editorial Sans", sans-serif;
-  font-weight: 200;
-  font-size: 12px;
+  font-weight: var(--navbarWeight);
+  font-size: var(--fontSize-title);
 
   a {
     text-decoration: none;
@@ -471,16 +552,17 @@ pre code {
 // Content metadata (dates, reading time, etc.)
 .content-meta {
   font-family: "PP Editorial Sans", sans-serif;
-  font-weight: 200;
-  font-size: 12px;
-  color: var(--gray);
+  font-weight: var(--navbarWeight);
+  font-size: var(--fontSize-label);
+  color: rgba(51, 46, 42, 0.55);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--tracking-label);
 }
 
 // Reduce excessive top spacing for all notes (sliding pane layout)
 // (base styles apply $topSpacing via a higher-specificity selector using #quartz-body)
 .pane-content {
+  // Mobile keeps the deeper inset - it has to clear the fixed navbar.
   padding-top: 4rem !important;
   position: relative;
 }
@@ -501,6 +583,42 @@ pre code {
 .page>#quartz-body .page-header .article-title {
   margin-top: 0 !important;
   text-align: center;
+}
+
+// On desktop the note title sits on the same row as the date, the way
+// garnet.nyc pins its page title to the top of the content column
+// (PageLayout's sticky header is `desktop:py-4`). .content-meta is absolutely
+// positioned at top: 1rem, so dropping the pane inset to match puts the two on
+// one line and lets the body copy follow straight after.
+@media not all and (#{$mobile}) {
+  // The fixed header sits at top: 1rem with 20px-tall icons, so its optical
+  // centre line is 26px down the viewport. Put the title and the date on that
+  // same line. Scoped away from .solo-pane, which stacks the date under a
+  // centred title instead (see .center.solo-pane rules in base.scss).
+  .pane-content {
+    padding-top: 1.2rem !important;
+  }
+
+  .center:not(.solo-pane) .content-meta {
+    top: 1rem;
+    height: 20px; // same box as the icon row
+    display: flex;
+    align-items: center; // centres the date on the icons' centre line
+  }
+
+  // The title centres on the pane while the date is pinned left, so reserve
+  // room on both sides - a long title wraps instead of running under the date.
+  .page>#quartz-body .page-header {
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  // Body copy starts immediately under the title row rather than carrying the
+  // first block's own top margin.
+  .pane-content article> :first-child {
+    margin-top: 0 !important;
+  }
 }
 
 // Hide section header anchor links (the # links next to headings)
@@ -621,7 +739,7 @@ header {
 
 .center {
   background-color: var(--light) !important;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url("/static/paper.png") !important;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png") !important;
   background-repeat: repeat, repeat !important;
   background-size: auto, auto !important;
   background-position: center, center !important;
@@ -633,7 +751,8 @@ header {
     content: "GARNET";
     position: fixed;
     top: 50%;
-    left: 68%;
+    // Centered in the space left of a single open note (pane is 45rem wide)
+    left: calc(50vw + 22.5rem);
     transform: translate(-50%, -50%);
     font-family: var(--garnetTitleFont);
     font-style: italic;

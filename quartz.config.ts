@@ -23,17 +23,21 @@ const config: QuartzConfig = {
       fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "PP Editorial New",
+        // Mirrors garnet.nyc: PP Editorial New for prose, PP Editorial Sans for
+        // titles, nav and labels
+        header: "PP Editorial Sans",
         body: "PP Editorial New",
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
+          // Ink matches garnet.nyc's --color-paper-text (#332e2a): a warm
+          // near-black rather than a neutral gray
           light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
+          lightgray: "#e0dcd8",
+          gray: "#948f8a",
+          darkgray: "#332e2a",
+          dark: "#332e2a",
           secondary: "#284b63",
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",

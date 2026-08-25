@@ -12,47 +12,27 @@
 
   &>.search-button {
     background-color: transparent;
-    border: 1px var(--lightgray) solid;
+    border: none;
     border-radius: 4px;
     font-family: inherit;
     font-size: inherit;
-    height: 2rem;
-    padding: 0 1rem 0 0;
+    padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: inherit;
     cursor: pointer;
     white-space: nowrap;
-    width: 100%;
-
-    @media all and ($desktop) {
-      border: none;
-      padding: 0;
-      width: 20px;
-      height: 20px;
-      justify-content: center;
-    }
+    width: 20px;
+    height: 20px;
 
     @media all and ($mobile) {
-      border: none;
-      padding: 0;
       width: auto;
       height: auto;
     }
 
     &>p {
-      display: inline;
-      color: var(--gray);
-      text-wrap: unset;
-
-      @media all and ($desktop) {
-        display: none;
-      }
-
-      @media all and ($mobile) {
-        display: none;
-        /* Hide search text on mobile */
-      }
+      display: none;
     }
 
     & svg {
@@ -194,16 +174,32 @@
         flex-grow: 1;
         display: block;
         overflow: hidden;
-        font-family: inherit;
-        color: var(--dark);
-        line-height: 1.5em;
-        font-weight: $normalWeight;
         overflow-y: auto;
         padding: 0 2rem;
+        // Typography is deliberately not set here - the preview keeps each
+        // section's original element (.page-header div, content <article>) so it
+        // inherits the same body/heading styles as a real page.
 
         .preview-inner {
           margin: 0 auto;
           width: min($pageWidth, 100%);
+
+          // The page centers its title in the header; the preview has no page
+          // layout around it, so the same treatment is restated here.
+          .page-header {
+            margin-bottom: 1rem;
+
+            .article-title {
+              margin: 1.5rem 0 0;
+              text-align: center;
+            }
+          }
+
+          // Metadata is stripped in JS, but stay defensive about any that slips
+          // through - it is absolutely positioned by the page layout.
+          .content-meta {
+            display: none;
+          }
         }
 
         a[role="anchor"] {

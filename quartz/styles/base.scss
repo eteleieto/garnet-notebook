@@ -730,7 +730,7 @@ iframe.pdf {
   padding-top: 60px !important;
   /* Push content down for navbar */
   background-color: var(--light);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/static/store.png"), url("/static/paper.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/static/store-watercolor.webp"), url("/static/paper.png");
   background-repeat: repeat, no-repeat, repeat;
   background-size: auto, 800px, auto;
   background-position: center, right 10% center, center;
@@ -748,8 +748,8 @@ iframe.pdf {
   width: 45rem;
   max-width: 90vw;
   background-color: var(--light);
-  /* Apply paper texture with 50% white overlay for better storefront visibility */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/static/paper.png");
+  /* Apply paper texture with 75% white overlay for better storefront visibility */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png");
   background-repeat: repeat, repeat;
   background-size: auto, auto;
   background-position: center, center;
@@ -776,6 +776,96 @@ iframe.pdf {
   border-left: none;
 }
 
+/* Solo reading view: a single pane (e.g. a link shared without ?stacked=)
+   spreads across the whole page instead of sitting as one narrow column. */
+.center.solo-pane .sliding-pane {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.center.solo-pane .sliding-pane-spine {
+  display: none;
+}
+
+/* The pane content spans the full width so absolutely-positioned chrome
+   (.content-meta) anchors to the page corner; the readable column is centered
+   by constraining the children instead. */
+.center.solo-pane .pane-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 2rem 3rem;
+}
+
+/* Scoped under #quartz-body with !important to outrank
+   `.page > #quartz-body .page-header { margin: ... !important }` in custom.scss,
+   which otherwise resets these auto margins and leaves the title flush left
+   while the article centers. */
+#quartz-body .center.solo-pane .pane-content > .page-header,
+#quartz-body .center.solo-pane .pane-content > article,
+#quartz-body .center.solo-pane .pane-content > hr,
+#quartz-body .center.solo-pane .pane-content > .page-footer {
+  max-width: 60rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* The date rides along under the article title here instead of being pulled
+   into the page corner - the corner belongs to the GARNET wordmark. */
+.center.solo-pane .content-meta {
+  position: static;
+  text-align: center;
+  margin: 0.4rem 0 0 0 !important;
+}
+
+/* GARNET wordmark, top left, linking home. Only rendered visible in solo view;
+   it borrows the paper-textured ink of the background watermark. */
+.solo-home-link {
+  display: none;
+}
+
+.center.solo-pane .solo-home-link {
+  /* Pinned to the navbar band like the search/graph icons opposite it, so it
+     stays put while the note scrolls. z-index clears the navbar's own 10000. */
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 3rem;
+  height: 60px;
+  z-index: 10001;
+  font-family: var(--garnetTitleFont);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("/static/paper.png");
+  background-size: 240px 240px;
+  background-repeat: repeat;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* The background GARNET watermark is positioned for the empty space beside a
+   45rem pane; in solo view the pane fills that space, so it would sit under the
+   text. The corner wordmark stands in for it. */
+.center.solo-pane::before {
+  display: none;
+}
+
 .sliding-pane-spine {
   flex: 0 0 40px;
   /* Fixed width */
@@ -783,7 +873,7 @@ iframe.pdf {
   height: 100%;
   background: var(--light);
   /* Apply texture to spine too */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/static/paper.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png");
   background-repeat: repeat, repeat;
   background-size: auto, auto;
   background-position: center, center;
@@ -868,6 +958,13 @@ footer {
   /* Show only the last (active) pane */
   .sliding-pane:last-child {
     display: flex;
+  }
+
+  /* While a ?stacked= URL is still being fetched the last pane is whichever one
+     has landed so far, so hold the view blank rather than flashing through each
+     note in the chain on the way to the one that was actually shared. */
+  .center.restoring-stack .sliding-pane {
+    visibility: hidden;
   }
 
   .sliding-pane-spine {

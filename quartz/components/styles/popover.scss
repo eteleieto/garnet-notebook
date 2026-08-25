@@ -27,12 +27,15 @@
     position: relative;
     width: 30rem;
     max-height: 20rem;
-    padding: 0 1rem 1rem 1rem;
-    font-weight: initial;
-    font-style: initial;
-    line-height: normal;
-    font-size: initial;
+    padding: 1.25rem 1rem 1rem 1rem;
+    // The popover shows a slice of a real page, so it inherits the page's own
+    // body treatment rather than resetting to the browser defaults.
     font-family: var(--bodyFont);
+    font-size: var(--fontSize-body);
+    font-weight: 200;
+    font-style: normal;
+    line-height: var(--lineHeight-body);
+    color: var(--darkgray);
     border: 1px solid var(--lightgray);
     background-color: var(--light);
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("/static/paper.png");
@@ -68,8 +71,25 @@
     }
   }
 
-  h1 {
-    font-size: 1.5rem;
+  // The page renders its title as the site's small uppercase label, centered
+  // above the body (see `.page > #quartz-body .page-header .article-title` in
+  // custom.scss). That rule is scoped to the page shell, so the copy lifted
+  // into the popover needs the same treatment restated here.
+  .article-title {
+    font-size: var(--fontSize-title);
+    line-height: 1.15;
+    margin: 0;
+    text-align: center;
+  }
+
+  // the header block, then 1rem before the body - matching `.page-header`
+  & > .popover-inner > .popover-hint:first-child {
+    margin: 0 0 1rem 0;
+  }
+
+  // hover previews shouldn't show the note's date
+  .content-meta {
+    display: none;
   }
 
   visibility: hidden;

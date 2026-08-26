@@ -285,24 +285,18 @@ async function setupSearch(
     // If search is active, then we will render the first result and display accordingly
     if (!container.classList.contains("active")) return
     if (e.key === "Enter" && !e.isComposing) {
-      // If result has focus, navigate to that one, otherwise pick first result
-      // Enter always dismisses the search bar. Navigate first when there is a
-      // real result to open; the "no results" card is not navigable, but the
-      // bar should still close.
-      if (results.contains(document.activeElement)) {
-        const active = document.activeElement as HTMLInputElement
-        if (!active.classList.contains("no-match")) {
-          await displayPreview(active)
-          active.click()
-        }
-      } else {
-        const anchor = document.getElementsByClassName("result-card")[0] as HTMLInputElement | null
-        if (anchor && !anchor.classList.contains("no-match")) {
-          await displayPreview(anchor)
-          anchor.click()
-        }
-      }
+      e.preventDefault()
+      // If a result has focus, open that one, otherwise open the first result.
+      // Enter always dismisses the search bar; the "no results" card is not
+      // navigable, but the bar should still close.
+      const target = results.contains(document.activeElement)
+        ? (document.activeElement as HTMLAnchorElement)
+        : (results.querySelector(".result-card") as HTMLAnchorElement | null)
+      const href = target && !target.classList.contains("no-match") ? target.href : null
       hideSearch()
+      if (href) {
+        window.spaNavigate(new URL(href))
+      }
     } else if (e.key === "ArrowUp" || (e.shiftKey && e.key === "Tab")) {
       e.preventDefault()
       if (results.contains(document.activeElement)) {
@@ -378,16 +372,6 @@ async function setupSearch(
       ${htmlTags}
       <p class="card-description">${content}</p>
     `
-    itemTile.addEventListener("click", (event) => {
-      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
-      hideSearch()
-    })
-
-    const handler = (event: MouseEvent) => {
-      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
-      hideSearch()
-    }
-
     async function onMouseEnter(ev: MouseEvent) {
       if (!ev.target) return
       const target = ev.target as HTMLInputElement
@@ -396,8 +380,6 @@ async function setupSearch(
 
     itemTile.addEventListener("mouseenter", onMouseEnter)
     window.addCleanup(() => itemTile.removeEventListener("mouseenter", onMouseEnter))
-    itemTile.addEventListener("click", handler)
-    window.addCleanup(() => itemTile.removeEventListener("click", handler))
 
     return itemTile
   }
@@ -449,12 +431,27 @@ async function setupSearch(
   async function displayPreview(el: HTMLElement | null) {
     if (!searchLayout || !enablePreview || !el || !preview) return
     const slug = el.id as FullSlug
-    const innerDiv = await fetchContent(slug).then((contents) =>
-      contents.flatMap((el) => [...highlightHTML(currentSearchTerm, el as HTMLElement).children]),
-    )
+    const sections = await fetchContent(slug)
+
     previewInner = document.createElement("div")
     previewInner.classList.add("preview-inner")
-    previewInner.append(...innerDiv)
+
+    for (const section of sections) {
+      // Each section is rebuilt with its original tag and classes - the page
+      // header <div> and the content <article> - so the preview inherits the
+      // exact typography the real page gets from its element-scoped styles
+      // instead of the generic <div> the preview used to flatten everything into.
+      const wrapper = document.createElement(section.tagName)
+      wrapper.className = section.className
+      if (wrapper.tagName === "DIV") {
+        wrapper.classList.add("page-header")
+      }
+      wrapper.append(...highlightHTML(currentSearchTerm, section as HTMLElement).children)
+      // The date line is chrome the page positions on its own; it has no place here
+      wrapper.querySelectorAll(".content-meta").forEach((meta) => meta.remove())
+      previewInner.append(wrapper)
+    }
+
     preview.replaceChildren(previewInner)
 
     // scroll to longest
@@ -529,6 +526,18 @@ async function setupSearch(
   window.addCleanup(() => searchButton.removeEventListener("click", () => showSearch("basic")))
   searchBar.addEventListener("input", onType)
   window.addCleanup(() => searchBar.removeEventListener("input", onType))
+
+  // Dismiss the search when any link inside it is followed - result cards as well
+  // as links rendered in the preview pane.
+  function onLinkClick(e: MouseEvent) {
+    if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return
+    const anchor = (e.target as HTMLElement | null)?.closest("a[href]")
+    if (!anchor) return
+    hideSearch()
+  }
+
+  container.addEventListener("click", onLinkClick)
+  window.addCleanup(() => container.removeEventListener("click", onLinkClick))
 
   registerEscapeHandler(container, hideSearch)
 }

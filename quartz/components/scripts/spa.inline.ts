@@ -25,10 +25,42 @@ function isMobile() {
   return window.innerWidth <= MOBILE_BREAKPOINT
 }
 
+function isHomeSlug(slug?: string) {
+  const normalized = slug?.toLowerCase()
+  return (
+    normalized === "index" || normalized === "index.html" || normalized === "" || normalized === "/"
+  )
+}
+
+// True while panes from a ?stacked= URL are still being fetched, so we don't
+// briefly flash the solo reading view before the stack is restored.
+let restoringStack = false
+
+// A single pane (e.g. a link shared from mobile, with no ?stacked=) reads as a
+// full-width reading view instead of one narrow column pinned to the left.
+function updateSoloState() {
+  const container = getContainer()
+  if (!container) return
+  const panes = getPanes()
+  const onlyPane = panes.length === 1 ? (panes[0] as HTMLElement) : undefined
+  // The homepage keeps its own layout - reading view is for note pages only.
+  const solo =
+    !isMobile() && !restoringStack && panes.length <= 1 && !isHomeSlug(onlyPane?.dataset.slug)
+  container.classList.toggle("solo-pane", solo)
+}
+
 // Custom horizontal-only scroll function to avoid vertical displacement from scrollIntoView
 function scrollPaneIntoView(pane: Element, behavior: ScrollBehavior = "smooth") {
   const container = getContainer() as HTMLElement
   if (!container || !pane) return
+
+  // On mobile the panes are a vertical column with only the last one shown, so
+  // there is nothing to scroll horizontally - just return to the top of the note.
+  if (isMobile()) {
+    container.scrollTo({ left: 0, top: 0, behavior })
+    window.scrollTo({ top: 0, behavior })
+    return
+  }
 
   const panes = getPanes()
   const paneIndex = panes.indexOf(pane)
@@ -62,6 +94,8 @@ function updatePanePositions() {
     p.style.zIndex = `${5 + index}`
   })
 
+  updateSoloState()
+
   // Check obscured state immediately after position update
   checkObscured()
 }
@@ -71,12 +105,7 @@ function createSpine(doc: Document | HTMLElement, title?: string) {
     doc instanceof Document ? doc.body?.dataset?.fileTitle : (doc as HTMLElement).dataset?.fileTitle
   const slug =
     doc instanceof Document ? doc.body?.dataset?.slug : (doc as HTMLElement).dataset?.slug
-  const normalizedSlug = slug?.toLowerCase()
-  const isHome =
-    normalizedSlug === "index" ||
-    normalizedSlug === "index.html" ||
-    normalizedSlug === "" ||
-    normalizedSlug === "/"
+  const isHome = isHomeSlug(slug)
   const spine = document.createElement("div")
   spine.className = "sliding-pane-spine"
   spine.innerText =
@@ -152,6 +181,25 @@ function updateUrlState() {
   history.pushState({}, "", url.toString())
 }
 
+// Revisiting a note that is already open. On desktop it is still on screen, so
+// scrolling back to it is enough. On mobile only the last pane is displayed, so
+// scrolling is a no-op and the tap would appear to do nothing - drop the panes
+// stacked above it instead, which walks the stack (and the URL) back to it.
+function revealExistingPane(existing: Element, scroll: boolean) {
+  // Not while a ?stacked= URL is still being rebuilt - the panes above are the
+  // stack being restored, not a chain the reader navigated past.
+  if (isMobile() && !restoringStack) {
+    const panes = getPanes()
+    const index = panes.indexOf(existing)
+    if (index !== -1) {
+      panes.slice(index + 1).forEach((p) => p.remove())
+      updatePanePositions()
+      updateUrlState()
+    }
+  }
+  if (scroll) scrollPaneIntoView(existing)
+}
+
 async function appendPane(url: URL, scroll: boolean = true, replaceFromIndex?: number) {
   const container = getContainer()
   if (!container) return
@@ -168,7 +216,7 @@ async function appendPane(url: URL, scroll: boolean = true, replaceFromIndex?: n
   // Optimistic check using URL
   const existing = panes.find((p) => (p as HTMLElement).dataset.url === url.href)
   if (existing) {
-    if (scroll) scrollPaneIntoView(existing)
+    revealExistingPane(existing, scroll)
     return
   }
 
@@ -199,7 +247,7 @@ async function appendPane(url: URL, scroll: boolean = true, replaceFromIndex?: n
     // Check for duplicates by slug after fetch (authoritative)
     const existingBySlug = panes.find((p) => (p as HTMLElement).dataset.slug === pageSlug)
     if (existingBySlug) {
-      if (scroll) scrollPaneIntoView(existingBySlug)
+      revealExistingPane(existingBySlug, scroll)
       return
     }
 
@@ -245,17 +293,25 @@ function init() {
     document.dispatchEvent(event)
   }
 
-  // Load stacked panes from URL (desktop only)
-  if (!isMobile()) {
+  // Load stacked panes from URL. This runs on mobile as well: only the last pane
+  // is visible there, but keeping the whole stack in the DOM (and in the URL) is
+  // what lets a narrow window widen back into the full sliding view.
+  {
     const params = new URLSearchParams(window.location.search)
     const stacked = params.get("stacked")
     if (stacked) {
       const slugs = stacked.split(",")
+      restoringStack = true
+      container?.classList.add("restoring-stack")
+      updateSoloState()
       const loadStacked = async () => {
         for (const slug of slugs) {
           const url = new URL(slug, window.location.origin)
           await appendPane(url, false)
         }
+        restoringStack = false
+        container?.classList.remove("restoring-stack")
+        updateSoloState()
         const panes = getPanes()
         if (panes.length > 0) {
           scrollPaneIntoView(panes[panes.length - 1], "instant")
@@ -275,10 +331,29 @@ function init() {
       },
       { passive: true },
     )
+    // Widening past the breakpoint turns the single visible pane back into the
+    // full sliding stack, so bring the deepest pane into view. The breakpoint
+    // check is debounced: a drag fires resize continuously, and acting on every
+    // tick would both thrash and let a transient width consume the crossing.
+    let wasMobile = isMobile()
+    let breakpointTimer: ReturnType<typeof setTimeout> | undefined
     window.addEventListener(
       "resize",
       () => {
+        updateSoloState()
         checkObscured()
+        clearTimeout(breakpointTimer)
+        breakpointTimer = setTimeout(() => {
+          const nowMobile = isMobile()
+          if (wasMobile === nowMobile) return
+          wasMobile = nowMobile
+          if (nowMobile) return
+          updatePanePositions()
+          const panes = getPanes()
+          if (panes.length > 0) {
+            scrollPaneIntoView(panes[panes.length - 1], "instant")
+          }
+        }, 150)
       },
       { passive: true },
     )
@@ -308,12 +383,6 @@ function init() {
 
     event.preventDefault()
 
-    // On mobile, use traditional navigation (no stacking)
-    if (isMobile()) {
-      window.location.assign(url)
-      return
-    }
-
     // Find which pane this click came from
     const sourcePane = a.closest(PANE_SELECTOR)
     let replaceIndex = undefined
@@ -335,6 +404,7 @@ function init() {
     appendPane(url instanceof URL ? url : new URL(url, window.location.origin))
 
   // Initial check
+  updateSoloState()
   checkObscured()
 }
 

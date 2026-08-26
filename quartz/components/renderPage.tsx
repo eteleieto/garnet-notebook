@@ -3,7 +3,13 @@ import { QuartzComponent, QuartzComponentProps } from "./types"
 import HeaderConstructor from "./Header"
 import BodyConstructor from "./Body"
 import { JSResourceToScriptElement, StaticResources } from "../util/resources"
-import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+import {
+  FullSlug,
+  RelativeURL,
+  joinSegments,
+  normalizeHastElement,
+  pathToRoot,
+} from "../util/path"
 import { clone } from "../util/clone"
 import { visit } from "unist-util-visit"
 import { Root, Element, ElementContent } from "hast"
@@ -269,6 +275,7 @@ export function renderPage(
     </div>
   )
 
+  const pathToHome = pathToRoot(slug)
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const direction = i18n(cfg.locale).direction ?? "ltr"
   const slugNormalized = slug?.toLowerCase()
@@ -287,6 +294,12 @@ export function renderPage(
             <div class="center">
               <div class="sliding-pane">
                 <div class="pane-content">
+                  {/* Shown only in the solo reading view (see .solo-pane styles);
+                      data-router-ignore so it loads the homepage fresh instead of
+                      stacking it as a second pane. */}
+                  <a class="solo-home-link" href={pathToHome} data-router-ignore>
+                    GARNET
+                  </a>
                   <div class="page-header">
                     <Header {...componentData}>
                       {header.map((HeaderComponent) => (

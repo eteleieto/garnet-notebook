@@ -410,6 +410,12 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     linkRenderData.push(linkRenderDatum)
   }
 
+  const navigateToNode = (id: SimpleSlug) => {
+    const targ = resolveRelative(fullSlug, id)
+    hideGlobalGraphOverlay()
+    window.spaNavigate(new URL(targ, window.location.toString()))
+  }
+
   let currentTransform = zoomIdentity
   if (enableDrag) {
     select<HTMLCanvasElement, NodeData | undefined>(app.canvas).call(
@@ -444,16 +450,14 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           // if the time between mousedown and mouseup is short, we consider it a click
           if (Date.now() - dragStartTime < 500) {
             const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
-            const targ = resolveRelative(fullSlug, node.id)
-            window.spaNavigate(new URL(targ, window.location.toString()))
+            navigateToNode(node.id)
           }
         }),
     )
   } else {
     for (const node of nodeRenderData) {
       node.gfx.on("click", () => {
-        const targ = resolveRelative(fullSlug, node.simulationData.id)
-        window.spaNavigate(new URL(targ, window.location.toString()))
+        navigateToNode(node.simulationData.id)
       })
     }
   }
@@ -541,6 +545,15 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     stopAnimation = true
     app.destroy()
   }
+}
+
+// Dismiss the global graph overlay. Teardown of the pixi app is deferred so we
+// never destroy it from inside one of its own event handlers.
+function hideGlobalGraphOverlay() {
+  for (const container of document.getElementsByClassName("global-graph-outer")) {
+    container.classList.remove("active")
+  }
+  setTimeout(cleanupGlobalGraphs, 0)
 }
 
 let localGraphCleanups: (() => void)[] = []

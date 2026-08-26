@@ -20,7 +20,7 @@ It's not only about access. A park is also at ground level and open to all. So i
 
 A storefront asks something of you. It structures action, establishes expected behavior and, historically at least, requires interaction. Walking down the street, it is the storefronts that whisper to you about the possible life you could live. Its potential public is the neighborhood, not a curated group.
 
-Cities share their own messages [^2]. So do neighborhoods. But, at the scale of streets – arguably, the most important unit of analysis for the city – storefronts exert the strongest influence on how life plays out. 
+Cities share their own messages.[^2] So do neighborhoods. But, at the scale of streets – arguably, the most important unit of analysis for the city – storefronts exert the strongest influence on how life plays out. 
 
 This is part of what makes the storefront such an unusual social technology: it combines openness with structure. It can organize encounters among people whose primary thing in common may simply be that they live in the same area. 
 
@@ -50,7 +50,7 @@ I am especially interested in the subset that occupy urban ground-floor commerci
 
 Yet, we mistakenly take these forms to be fixed categories of the built environment. Instead, they are inventions. Each emerged under unique spatial, cultural, and historical conditions, and then became legible, templatized, and fixed in the urban imagination.
 
-It's easy to confuse familiar forms as inevitable forms. The modern restaurant is only a few centuries old, emerging in the 18th century in Paris [^6]. Other variations, like the fast-casual slopbowl, have emerged much more recently. 
+It's easy to confuse familiar forms as inevitable forms. The modern restaurant is only a few centuries old, emerging in the 18th century in Paris.[^6] Other variations, like the fast-casual slopbowl, have emerged much more recently. 
 
 Walk into any storefront where you live, and you probably have an astonishingly detailed model of how you should exist within it.  
 
@@ -94,7 +94,7 @@ A new social form begins without any of this. Customers, employees, and operator
 
 So invention alone is insufficient. A new form must be demonstrated, abstracted from the particular establishment that produced it, made legible, remixed and then absorbed into the default conventions of customers, workers, and shopkeepers.
 
-At maturity, no one person or company upholds the form. They are simply drawn on, and moved through, like language itself [^12].
+At maturity, no one person or company upholds the form. They are simply drawn on, and moved through, like language itself.[^12]
 
 ---
 ## New Forms
@@ -140,7 +140,7 @@ The neighborhood is where we develop this shared reality.
 
 If our cities don't draw the individual into a rich and meaningful social life, abundant leisure time may be captured by solitary entertainment. The ground-level, and the institutions which make it up, will have to support the activities of the commons: eating together, learning together, building together, worshipping together, or simply being in the presence of others. 
 
-We can even imagine post-transactional or post-retail storefronts: places whose primary purpose is no longer commerce, but instead sociality or something else [^11].
+We can even imagine post-transactional or post-retail storefronts: places whose primary purpose is no longer commerce, but instead sociality or something else.[^11]
 
 In all versions of the future, the ground-level becomes much more important, not less. 
 
@@ -155,7 +155,7 @@ You don't need a master city plan to change urban life.
 
 Shopkeepers are operators, institution builders, researchers, social architects, and civic leaders working at the smallest scale at which urban life can be repeatedly rearranged and reworked.
 
-If you are ambitious, wish to be involved in your neighborhood, work at the scale of the street and contribute to forms that when scaled shape a nation.  
+If you are ambitious, and wish to be deeply involved in your neighborhood, work at the scale of the street and contribute to forms that when scaled shape a nation.  
 
 ---
 

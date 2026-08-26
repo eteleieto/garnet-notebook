@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { garnetOgImage } from "./quartz/util/garnetOgImage"
 
 /**
  * Quartz 4 Configuration
@@ -8,7 +9,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Garnet's Notebook",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,7 +17,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "notebook.garnet.nyc",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -25,8 +26,8 @@ const config: QuartzConfig = {
       typography: {
         // Mirrors garnet.nyc: PP Editorial New for prose, PP Editorial Sans for
         // titles, nav and labels
-        header: "PP Editorial Sans",
-        body: "PP Editorial New",
+        header: { name: "PP Editorial Sans", weights: [400] },
+        body: { name: "PP Editorial New", weights: [400] },
         code: "IBM Plex Mono",
       },
       colors: {
@@ -92,8 +93,10 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Disabled - CustomOgImages requires Google Fonts, we use local fonts
-      // Plugin.CustomOgImages(),
+      Plugin.CustomOgImages({
+        excludeRoot: true,
+        imageStructure: garnetOgImage,
+      }),
     ],
   },
 }

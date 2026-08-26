@@ -116,6 +116,7 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
       const fonts = await getSatoriFonts(headerFont, bodyFont)
 
       for (const [_tree, vfile] of content) {
+        if (fullOptions.excludeRoot && vfile.data.slug === "index") continue
         if (vfile.data.frontmatter?.socialImage !== undefined) continue
         yield processOgImage(ctx, vfile.data, fonts, fullOptions)
       }
@@ -129,6 +130,7 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
       // find all slugs that changed or were added
       for (const changeEvent of changeEvents) {
         if (!changeEvent.file) continue
+        if (fullOptions.excludeRoot && changeEvent.file.data.slug === "index") continue
         if (changeEvent.file.data.frontmatter?.socialImage !== undefined) continue
         if (changeEvent.type === "add" || changeEvent.type === "change") {
           yield processOgImage(ctx, changeEvent.file.data, fonts, fullOptions)
@@ -153,15 +155,18 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
                 : `https://${baseUrl}/static/${userDefinedOgImagePath}`
             }
 
-            const generatedOgImagePath = isRealFile
+            const useGeneratedImage =
+              isRealFile && !(fullOptions.excludeRoot && pageData.slug === "index")
+            const generatedOgImagePath = useGeneratedImage
               ? `https://${baseUrl}/${pageData.slug!}-og-image.webp`
               : undefined
             const defaultOgImagePath = `https://${baseUrl}/static/og-image.png`
             const ogImagePath = userDefinedOgImagePath ?? generatedOgImagePath ?? defaultOgImagePath
-            const ogImageMimeType = `image/${getFileExtension(ogImagePath) ?? "png"}`
+            const ogImageExtension = (getFileExtension(ogImagePath) ?? ".png").replace(/^\./, "")
+            const ogImageMimeType = `image/${ogImageExtension}`
             return (
               <>
-                {!userDefinedOgImagePath && (
+                {!userDefinedOgImagePath && useGeneratedImage && (
                   <>
                     <meta property="og:image:width" content={fullOptions.width.toString()} />
                     <meta property="og:image:height" content={fullOptions.height.toString()} />

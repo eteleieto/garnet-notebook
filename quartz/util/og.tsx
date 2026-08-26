@@ -14,6 +14,25 @@ import { styleText } from "util"
 const defaultHeaderWeight = [700]
 const defaultBodyWeight = [400]
 
+const localFontFiles: Record<string, Record<number, string>> = {
+  "PP Editorial Sans": {
+    400: "PPEditorialSans-Medium.otf",
+  },
+  "PP Editorial New": {
+    400: "PPEditorialNew-Regular.otf",
+  },
+  Recovered: {
+    400: "RecoveredFont-Italic.ttf",
+  },
+}
+
+async function loadLocalFont(fontName: string, weight: FontWeight) {
+  const filename = localFontFiles[fontName]?.[weight]
+  if (!filename) return
+
+  return fs.readFile(path.join(QUARTZ, "static", "fonts", filename))
+}
+
 export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: FontSpecification) {
   // Get all weights for header and body fonts
   const headerWeights: FontWeight[] = (
@@ -30,7 +49,8 @@ export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: Fo
 
   // Fetch fonts for all weights and convert to satori format in one go
   const headerFontPromises = headerWeights.map(async (weight) => {
-    const data = await fetchTtf(headerFontName, weight)
+    const data =
+      (await loadLocalFont(headerFontName, weight)) ?? (await fetchTtf(headerFontName, weight))
     if (!data) return null
     return {
       name: headerFontName,
@@ -41,7 +61,8 @@ export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: Fo
   })
 
   const bodyFontPromises = bodyWeights.map(async (weight) => {
-    const data = await fetchTtf(bodyFontName, weight)
+    const data =
+      (await loadLocalFont(bodyFontName, weight)) ?? (await fetchTtf(bodyFontName, weight))
     if (!data) return null
     return {
       name: bodyFontName,
@@ -55,11 +76,22 @@ export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: Fo
     Promise.all(headerFontPromises),
     Promise.all(bodyFontPromises),
   ])
+  const garnetDisplayFont = await loadLocalFont("Recovered", 400)
 
   // Filter out any failed fetches and combine header and body fonts
   const fonts: SatoriOptions["fonts"] = [
     ...headerFonts.filter((font): font is NonNullable<typeof font> => font !== null),
     ...bodyFonts.filter((font): font is NonNullable<typeof font> => font !== null),
+    ...(garnetDisplayFont
+      ? [
+          {
+            name: "Recovered",
+            data: garnetDisplayFont,
+            weight: 400 as const,
+            style: "italic" as const,
+          },
+        ]
+      : []),
   ]
 
   return fonts

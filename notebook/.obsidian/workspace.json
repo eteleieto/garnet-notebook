@@ -6,7 +6,7 @@
       {
         "id": "e0603f24fbf65b08",
         "type": "tabs",
-        "dimension": 42.016806722689076,
+        "dimension": 26.330150068212827,
         "children": [
           {
             "id": "9c22d40f3fd75cad",
@@ -350,7 +350,7 @@
       {
         "id": "03b645b3274dace3",
         "type": "tabs",
-        "dimension": 57.98319327731093,
+        "dimension": 73.66984993178718,
         "children": [
           {
             "id": "c1a1e1998962d9e3",
@@ -547,6 +547,20 @@
               "icon": "lucide-file",
               "title": "You Should Become the Shopkeeper"
             }
+          },
+          {
+            "id": "425cb2b6999bd235",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Against Curation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Against Curation"
+            }
           }
         ],
         "currentTab": 13
@@ -608,7 +622,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "f5403921a42b1dcb",
@@ -715,13 +730,15 @@
   },
   "active": "dd74b344c9910379",
   "lastOpenFiles": [
-    "content/Social Forms.md",
+    "Against Curation.md",
+    "a string of overdue coffee chats.md",
+    "maximize collisions.md",
     "content/You Should Become the Shopkeeper.md",
+    "content/Social Forms.md",
     "Garnet's Notebook.md",
     "content/index.md",
     "Relationships are plagued by their beginnings.md",
     "The Economics of the Chair.md",
-    "Against Curation.md",
     "Restaurant References.md",
     "Storefronts are the Fundamental Unit of the City.md",
     "R&D Night 1.md",
@@ -739,8 +756,6 @@
     "Storefronts create a field of action.md",
     "Neighbors.md",
     "Opening Welcome.md",
-    "our thanks.md",
-    "Our Philosophy.md",
     "Screenshot 2025-10-22 at 11.10.46 PM.png",
     "Screenshot 2025-05-05 at 3.42.42 PM.png",
     "Screenshot 2026-06-28 at 11.18.50 AM.png",

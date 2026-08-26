@@ -18,7 +18,7 @@ In the home, you are a friend of the resident.
 
 It's not only about access. A park is also at ground level and open to all. So is a street. But these spaces, by design, leave your activity somewhat undetermined. 
 
-A storefront asks something of you. It structures action, establishes expected behavior and, historically at least, requires interaction. Walking down the street, it is the storefronts that whisper to you about the possible life you could live. Its potential public is the neighborhood, not a curated group.
+A storefront asks something of you. It structures action, establishes expected behavior and, historically at least, requires interaction. Walking down the street, storefronts whisper to you about the possible life you could live. Its potential public is the neighborhood, not a curated group.
 
 Cities share their own messages.[^2] So do neighborhoods. But, at the scale of streets – arguably, the most important unit of analysis for the city – storefronts exert the strongest influence on how life plays out. 
 
